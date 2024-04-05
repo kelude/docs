@@ -16,6 +16,8 @@ export default defineUserConfig({
 
   bundler: viteBundler(),
   theme: defaultTheme({
+    logo: '/images/hero.png',
+    
     locales: {
         '/': {
             navbar: navbar,
