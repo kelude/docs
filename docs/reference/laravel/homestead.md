@@ -97,7 +97,7 @@ networks:
 
 `E:\bin\homestead.bat`
 
-```
+```batch
 @echo off
  
 set cwd=%cd%
@@ -116,4 +116,8 @@ homestead up
 homestead halt
 
 homestead reload --provision
+
+homestead ssh
+
+homestead destroy
 ```
