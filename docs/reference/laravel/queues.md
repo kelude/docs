@@ -2,7 +2,9 @@
 
 [Official Documentation](https://laravel.com/docs/queues)
 
-### Supervisor
+### Supervisor Configuration
+
+#### Installing Supervisor
 
 ```shell
 sudo apt install supervisor
@@ -18,7 +20,7 @@ sudo systemctl stop supervisor
 sudo systemctl start supervisor
 ```
 
-### Deploy
+#### Configuring Supervisor
 
 ```shell
 sudo vim /etc/supervisor/conf.d/laravel-worker.conf
@@ -39,6 +41,12 @@ stdout_logfile=/home/vagrant/code/laravel-queue/storage/logs/worker.log
 stopwaitsecs=3600
 ```
 
+#### Starting Supervisor
+
+```shell
+sudo supervisorctl reread
+```
+
 ```shell
 sudo supervisorctl update
 ```
@@ -47,13 +55,19 @@ sudo supervisorctl update
 sudo supervisorctl start "laravel-worker:*"
 ```
 
+### Commands
+
 ```shell
 sudo supervisorctl status
 ```
 
+To delete all of your failed jobs from the failed_jobs table, you may use the queue:flush command:
+
 ```shell
 php artisan queue:flush
 ```
+
+You may gracefully restart all of the workers by issuing the queue:restart command:
 
 ```shell
 php artisan queue:restart

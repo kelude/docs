@@ -2,6 +2,8 @@
 
 [Official Documentation](https://laravel.com/docs/scheduling)
 
+### Running the Scheduler
+
 ```shell
 crontab -e
 ```

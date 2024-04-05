@@ -2,7 +2,9 @@
 
 [Official Documentation](https://laravel.com/docs/reverb)
 
-### Deploy
+### Supervisor Configuration
+
+#### Configuring Supervisor
 
 ```shell
 sudo vim /etc/supervisor/conf.d/laravel-reverb.conf
@@ -16,6 +18,8 @@ autostart=true
 autorestart=true
 user=vagrant
 ```
+
+#### Starting Supervisor
 
 ```shell
 sudo supervisorctl update

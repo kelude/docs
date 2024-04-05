@@ -2,22 +2,36 @@
 
 [Official Documentation](https://laravel.com/docs/homestead)
 
-## Windows
+### Install Homestead on Windows
+
+#### Prerequisites
 
 [Vagrant](https://developer.hashicorp.com/vagrant/downloads)
+
+Clone the Homestead repository
 
 ```shell
 cd E:\
 git clone https://github.com/laravel/homestead.git ./Homestead
 ```
 
+Checkout the `release` branch
+
 ```shell
 cd Homestead
 ```
 
 ```shell
+git checkout release
+```
+
+Configure
+
+```shell
 ./init.bat
 ```
+
+### Configuring Homestead
 
 `E:\Homestead\Homestead.yaml`
 
@@ -89,11 +103,15 @@ networks:
       bridge: "Realtek PCIe GBE Family Controller"
 ```
 
+#### Hostname Resolution
+
 `C:\Windows\System32\drivers\etc\hosts`
 
 ```
 192.168.56.56	homestead.test
 ```
+
+### Accessing Homestead Globally
 
 `E:\bin\homestead.bat`
 
