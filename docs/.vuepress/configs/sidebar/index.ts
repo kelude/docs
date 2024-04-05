@@ -20,8 +20,14 @@ export const sidebar: SidebarConfig = {
                 '/reference/lemp/php.md',
             ],
         },
-        '/reference/redis.md',
-        '/reference/nodejs.md',
+        {
+            text: 'Services',
+            collapsible: true,
+            children: [
+                '/reference/redis.md',
+                '/reference/nodejs.md',
+            ],
+        },
     ],
     '/laravel/': [
         {

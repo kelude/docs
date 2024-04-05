@@ -19,8 +19,13 @@ export const navbar: NavbarConfig = [
                     '/reference/lemp/php.md',
                 ],
             },
-            '/reference/redis.md',
-            '/reference/nodejs.md',
+            {
+                text: 'Services',
+                children: [
+                    '/reference/redis.md',
+                    '/reference/nodejs.md',
+                ],
+            },
         ],
     },
     {
@@ -29,15 +34,27 @@ export const navbar: NavbarConfig = [
             {
                 text: 'Digging Deeper',
                 children: [
-                    '/laravel/queues.md',
-                    '/laravel/scheduling.md',
+                    {
+                        text: "Queues",
+                        link: '/laravel/queues.md',
+                    },
+                    {
+                        text: "Task Scheduling",
+                        link: '/laravel/scheduling.md',
+                    },
                 ],
             },
             {
                 text: 'Packages',
                 children: [
-                    '/laravel/homestead.md',
-                    '/laravel/reverb.md',
+                    {
+                        text: "Homestead",
+                        link: '/laravel/homestead.md',
+                    },
+                    {
+                        text: "Reverb",
+                        link: "/laravel/reverb.md",
+                    },
                 ],
             },
         ],
