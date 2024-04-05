@@ -21,6 +21,13 @@ export default defineUserConfig({
             navbar: navbar,
             sidebar: sidebar,
         }
-    }
+    },
+    
   }),
+
+  markdown: {
+    code: {
+      lineNumbers: false,
+    },
+  },
 })
