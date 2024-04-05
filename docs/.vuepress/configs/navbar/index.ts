@@ -5,6 +5,7 @@ export const navbar: NavbarConfig = [
         text: 'Guide',
         children: [
           '/guide/introduction.md',
+          '/guide/getting-started.md',
         ],
     },
     {
@@ -20,6 +21,25 @@ export const navbar: NavbarConfig = [
             },
             '/reference/redis.md',
             '/reference/nodejs.md',
+        ],
+    },
+    {
+        text: 'Laravel',
+        children: [
+            {
+                text: 'Digging Deeper',
+                children: [
+                    '/laravel/queues.md',
+                    '/laravel/scheduling.md',
+                ],
+            },
+            {
+                text: 'Packages',
+                children: [
+                    '/laravel/homestead.md',
+                    '/laravel/reverb.md',
+                ],
+            },
         ],
     },
 ];

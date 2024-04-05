@@ -3,11 +3,11 @@ import { SidebarConfig } from "@vuepress/theme-default";
 export const sidebar: SidebarConfig = {
     '/guide/': [
         {
-        text: 'Guide',
-        children: [
-            '/guide/introduction.md',
-            '/guide/getting-started.md',
-        ],
+            text: 'Guide',
+            children: [
+                '/guide/introduction.md',
+                '/guide/getting-started.md',
+            ],
         },
     ],
     '/reference/': [
@@ -22,27 +22,35 @@ export const sidebar: SidebarConfig = {
         },
         '/reference/redis.md',
         '/reference/nodejs.md',
+    ],
+    '/laravel/': [
         {
-            text: 'Laravel',
+            text: 'Digging Deeper',
+            collapsible: true,
+            children: [
+                {
+                    text: 'Queues',
+                    link: '/laravel/queues.md',
+                },
+                {
+                    text: 'Task Scheduling',
+                    link: '/laravel/scheduling.md',
+                },
+            ],
+        },
+        {
+            text: 'Packages',
             collapsible: true,
             children: [
                 {
                     text: 'Homestead',
-                    link: '/reference/laravel/homestead.md',
-                },
-                {
-                    text: 'Queues',
-                    link: '/reference/laravel/queues.md',
+                    link: '/laravel/homestead.md',
                 },
                 {
                     text: 'Reverb',
-                    link: '/reference/laravel/reverb.md',
-                },
-                {
-                    text: 'Task Scheduling',
-                    link: '/reference/laravel/scheduling.md',
+                    link: '/laravel/reverb.md',
                 },
             ],
         },
-    ],
+    ]
 };
