@@ -14,6 +14,12 @@ sudo apt install mysql-server
 mysql -V
 ```
 
+### Configuring MySQL
+
+```shell
+sudo mysql_secure_installation
+```
+
 ### Create database and user
 
 ```shell
@@ -42,7 +48,7 @@ GRANT ALL ON example_database.* TO 'example_user'@'localhost';
 SHOW DATABASES;
 ```
 
-###  Export & Import
+### Export & Import
 
 ```shell
 mysqldump -u root -p example_database > dump.sql
