@@ -1,8 +1,7 @@
 import { viteBundler } from '@vuepress/bundler-vite'
 import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress'
-import { navbar } from './navbar'
-import { sidebar } from './sidebar'
+import { navbar, sidebar } from './configs/index'
 
 export default defineUserConfig({
   base: '/',
