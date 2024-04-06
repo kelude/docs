@@ -26,7 +26,7 @@ sudo supervisorctl update
 ```
 
 ```shell
-sudo supervisorctl start laravel-reverb
+sudo supervisorctl status
 ```
 
 ### Web Server
