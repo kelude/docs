@@ -128,6 +128,19 @@ CREATE DATABASE example_database CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_c
 ```
 
 ```sql
+CREATE USER 'example_user'@'localhost' IDENTIFIED BY RANDOM PASSWORD;
+```
+
+```
++----------------+-----------+----------------------+-------------+
+| user           | host      | generated password   | auth_factor |
++----------------+-----------+----------------------+-------------+
+| example_user   | localhost | 3u5][_hSi{Z(+YS;;(pk |           1 |
++----------------+-----------+----------------------+-------------+
+1 row in set (0.13 sec)
+```
+
+```sql
 CREATE USER 'example_user'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 ```
 
