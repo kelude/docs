@@ -1,6 +1,6 @@
 # Nginx
 
-[Install nginx on Ubuntu](https://nginx.org/en/linux_packages.html#Ubuntu)
+[Install Nginx stable version on Ubuntu](https://nginx.org/en/linux_packages.html#Ubuntu)
 
 ### Installation
 
