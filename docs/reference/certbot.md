@@ -80,6 +80,4 @@ Output
      Active: active (waiting) since Sun 2024-04-07 09:59:09 UTC; 18min ago
     Trigger: Sun 2024-04-07 23:45:05 UTC; 13h left
    Triggers: ● certbot.service
-
-Apr 07 09:59:09 vultr systemd[1]: Started Run certbot twice daily.
 ```
