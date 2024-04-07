@@ -26,6 +26,7 @@ export const sidebar: SidebarConfig = {
             children: [
                 '/reference/redis.md',
                 '/reference/nodejs.md',
+                '/reference/certbot.md',
             ],
         },
     ],

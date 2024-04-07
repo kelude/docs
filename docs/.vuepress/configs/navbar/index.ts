@@ -24,6 +24,7 @@ export const navbar: NavbarConfig = [
                 children: [
                     '/reference/redis.md',
                     '/reference/nodejs.md',
+                    '/reference/certbot.md',
                 ],
             },
         ],

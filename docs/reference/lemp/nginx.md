@@ -84,10 +84,12 @@ sudo vim /etc/nginx/conf.d/example.conf
 server {
     listen 80;
     listen [::]:80;
-    
-    server_name example.com *.example.com;
+    server_name example.com www.example.com;
+
     root /var/www/example.com/public;
     index index.html index.htm index.php;
+
+    access_log /var/log/nginx/example.com.log;
 
     location / {
         try_files $uri $uri/ /index.php?$query_string;
