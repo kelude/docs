@@ -2,6 +2,7 @@ import { viteBundler } from '@vuepress/bundler-vite'
 import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress'
 import { navbar, sidebar } from './configs/index'
+import { docsearchPlugin } from '@vuepress/plugin-docsearch'
 
 export default defineUserConfig({
   base: '/',
@@ -17,7 +18,7 @@ export default defineUserConfig({
   bundler: viteBundler(),
   theme: defaultTheme({
     logo: '/images/hero.png',
-    
+
     locales: {
         '/': {
             navbar: navbar,
@@ -32,4 +33,11 @@ export default defineUserConfig({
       lineNumbers: false,
     },
   },
+
+  plugins: [
+    docsearchPlugin({
+
+    }),
+  ],
+
 })

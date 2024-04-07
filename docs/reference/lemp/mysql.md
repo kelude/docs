@@ -154,9 +154,19 @@ SHOW DATABASES;
 
 ### Export & Import
 
+#### Export
+
 ```shell
 mysqldump -u root -p example_database > dump.sql
 ```
+
+Excluding multiple tables
+
+```shell
+mysqldump -u root -p example_database --ignore-table=example_database.table1 --ignore-table=example_database.table2 > dump.sql 
+```
+
+#### Import
 
 ```shell
 mysql -u root -p example_database < dump.sql
