@@ -27,6 +27,7 @@ export const sidebar: SidebarConfig = {
                 '/reference/redis.md',
                 '/reference/nodejs.md',
                 '/reference/certbot.md',
+                '/reference/minio.md',
             ],
         },
     ],

@@ -25,6 +25,7 @@ export const navbar: NavbarConfig = [
                     '/reference/redis.md',
                     '/reference/nodejs.md',
                     '/reference/certbot.md',
+                    '/reference/minio.md',
                 ],
             },
         ],
