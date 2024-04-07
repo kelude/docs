@@ -18,6 +18,7 @@ export default defineUserConfig({
   bundler: viteBundler(),
   theme: defaultTheme({
     logo: '/images/hero.png',
+    repo: 'kelude/docs',
 
     locales: {
         '/': {
