@@ -37,7 +37,9 @@ export default defineUserConfig({
 
   plugins: [
     docsearchPlugin({
-
+      appId: 'VYR1K2T971',
+      apiKey: '2f4cf3aa07c2bd8e1c476dea1cda6d94',
+      indexName: 'kelude',
     }),
   ],
 
