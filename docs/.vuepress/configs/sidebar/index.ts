@@ -1,15 +1,6 @@
 import { SidebarConfig } from "@vuepress/theme-default";
 
 export const sidebar: SidebarConfig = {
-    '/guide/': [
-        {
-            text: 'Guide',
-            children: [
-                '/guide/introduction.md',
-                '/guide/getting-started.md',
-            ],
-        },
-    ],
     '/lemp/': [
         {
             text: 'LEMP',
@@ -17,17 +8,6 @@ export const sidebar: SidebarConfig = {
                 '/lemp/nginx.md',
                 '/lemp/mysql.md',
                 '/lemp/php.md',
-            ],
-        },
-    ],
-    '/services/': [
-        {
-            text: 'Services',
-            children: [
-                '/services/redis.md',
-                '/services/nodejs.md',
-                '/services/certbot.md',
-                '/services/minio.md',
             ],
         },
     ],
@@ -39,6 +19,17 @@ export const sidebar: SidebarConfig = {
                 '/laravel/scheduling.md',
                 '/laravel/homestead.md',
                 '/laravel/reverb.md',
+            ],
+        },
+    ],
+    '/services/': [
+        {
+            text: 'Services',
+            children: [
+                '/services/redis.md',
+                '/services/nodejs.md',
+                '/services/certbot.md',
+                '/services/minio.md',
             ],
         },
     ],

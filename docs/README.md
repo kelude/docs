@@ -3,11 +3,11 @@ home: true
 title: Home
 heroImage: /images/hero.png
 actions:
-  - text: Get Started
-    link: /guide/getting-started.html
+  - text: LEMP
+    link: /lemp/
     type: primary
-  - text: Introduction
-    link: /guide/introduction.html
+  - text: Laravel
+    link: /laravel/
     type: secondary
 features:
   - title: Simplicity First
