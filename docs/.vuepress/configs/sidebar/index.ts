@@ -35,22 +35,10 @@ export const sidebar: SidebarConfig = {
         {
             text: 'Laravel',
             children: [
-                {
-                    text: 'Queues',
-                    link: '/laravel/queues.md',
-                },
-                {
-                    text: 'Task Scheduling',
-                    link: '/laravel/scheduling.md',
-                },
-                {
-                    text: 'Homestead',
-                    link: '/laravel/homestead.md',
-                },
-                {
-                    text: 'Reverb',
-                    link: '/laravel/reverb.md',
-                },
+                '/laravel/queues.md',
+                '/laravel/scheduling.md',
+                '/laravel/homestead.md',
+                '/laravel/reverb.md',
             ],
         },
     ],
