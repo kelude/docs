@@ -9,25 +9,20 @@ export const navbar: NavbarConfig = [
         ],
     },
     {
-        text: 'Reference',
+        text: 'LEMP',
         children: [
-            {
-                text: 'LEMP',
-                children: [
-                    '/reference/lemp/nginx.md',
-                    '/reference/lemp/mysql.md',
-                    '/reference/lemp/php.md',
-                ],
-            },
-            {
-                text: 'Services',
-                children: [
-                    '/reference/redis.md',
-                    '/reference/nodejs.md',
-                    '/reference/certbot.md',
-                    '/reference/minio.md',
-                ],
-            },
+            '/lemp/nginx.md',
+            '/lemp/mysql.md',
+            '/lemp/php.md',
+        ],
+    },
+    {
+        text: 'Services',
+        children: [
+            '/services/redis.md',
+            '/services/nodejs.md',
+            '/services/certbot.md',
+            '/services/minio.md',
         ],
     },
     {

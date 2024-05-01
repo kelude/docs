@@ -10,24 +10,24 @@ export const sidebar: SidebarConfig = {
             ],
         },
     ],
-    '/reference/': [
+    '/lemp/': [
         {
             text: 'LEMP',
-            collapsible: true,
             children: [
-                '/reference/lemp/nginx.md',
-                '/reference/lemp/mysql.md',
-                '/reference/lemp/php.md',
+                '/lemp/nginx.md',
+                '/lemp/mysql.md',
+                '/lemp/php.md',
             ],
         },
+    ],
+    '/services/': [
         {
             text: 'Services',
-            collapsible: true,
             children: [
-                '/reference/redis.md',
-                '/reference/nodejs.md',
-                '/reference/certbot.md',
-                '/reference/minio.md',
+                '/services/redis.md',
+                '/services/nodejs.md',
+                '/services/certbot.md',
+                '/services/minio.md',
             ],
         },
     ],
