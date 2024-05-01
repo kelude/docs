@@ -33,7 +33,7 @@ export const sidebar: SidebarConfig = {
     ],
     '/laravel/': [
         {
-            text: 'Digging Deeper',
+            text: 'Laravel',
             collapsible: true,
             children: [
                 {
@@ -44,12 +44,6 @@ export const sidebar: SidebarConfig = {
                     text: 'Task Scheduling',
                     link: '/laravel/scheduling.md',
                 },
-            ],
-        },
-        {
-            text: 'Packages',
-            collapsible: true,
-            children: [
                 {
                     text: 'Homestead',
                     link: '/laravel/homestead.md',
@@ -60,5 +54,5 @@ export const sidebar: SidebarConfig = {
                 },
             ],
         },
-    ]
+    ],
 };
