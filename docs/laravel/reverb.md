@@ -7,12 +7,12 @@
 #### Configuring Supervisor
 
 ```shell
-sudo vim /etc/supervisor/conf.d/laravel-reverb.conf
+sudo nano /etc/supervisor/conf.d/laravel-reverb.conf
 ```
 
 ```ini
 [program:laravel-reverb]
-command=/usr/bin/php /var/www/laravel-reverb/artisan reverb:start
+command=/usr/bin/php /home/vagrant/code/laravel-reverb/artisan reverb:start
 numprocs=1
 autostart=true
 autorestart=true
@@ -20,6 +20,10 @@ user=vagrant
 ```
 
 #### Starting Supervisor
+
+```shell
+sudo supervisorctl reread
+```
 
 ```shell
 sudo supervisorctl update
@@ -32,7 +36,7 @@ sudo supervisorctl status
 ### Web Server
 
 ```shell
-sudo vim /etc/nginx/conf.d/laravel-reverb.conf
+sudo nano /etc/nginx/conf.d/laravel-reverb.conf
 ```
 
 ```nginx
