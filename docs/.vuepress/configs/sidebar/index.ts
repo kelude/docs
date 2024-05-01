@@ -34,7 +34,6 @@ export const sidebar: SidebarConfig = {
     '/laravel/': [
         {
             text: 'Laravel',
-            collapsible: true,
             children: [
                 {
                     text: 'Queues',
