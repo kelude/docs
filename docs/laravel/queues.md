@@ -23,7 +23,7 @@ sudo systemctl start supervisor
 #### Configuring Supervisor
 
 ```shell
-sudo vim /etc/supervisor/conf.d/laravel-worker.conf
+sudo nano /etc/supervisor/conf.d/laravel-worker.conf
 ```
 
 ```ini
