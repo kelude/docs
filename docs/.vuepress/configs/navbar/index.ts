@@ -34,30 +34,20 @@ export const navbar: NavbarConfig = [
         text: 'Laravel',
         children: [
             {
-                text: 'Digging Deeper',
-                children: [
-                    {
-                        text: "Queues",
-                        link: '/laravel/queues.md',
-                    },
-                    {
-                        text: "Task Scheduling",
-                        link: '/laravel/scheduling.md',
-                    },
-                ],
+                text: "Queues",
+                link: '/laravel/queues.md',
             },
             {
-                text: 'Packages',
-                children: [
-                    {
-                        text: "Homestead",
-                        link: '/laravel/homestead.md',
-                    },
-                    {
-                        text: "Reverb",
-                        link: "/laravel/reverb.md",
-                    },
-                ],
+                text: "Task Scheduling",
+                link: '/laravel/scheduling.md',
+            },
+            {
+                text: "Homestead",
+                link: '/laravel/homestead.md',
+            },
+            {
+                text: "Reverb",
+                link: "/laravel/reverb.md",
             },
         ],
     },
