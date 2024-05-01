@@ -29,7 +29,7 @@ sudo nano /etc/supervisor/conf.d/laravel-worker.conf
 ```ini
 [program:laravel-worker]
 process_name=%(program_name)s_%(process_num)02d
-command=/usr/bin/php /home/vagrant/code/laravel-queue/artisan queue:work
+command=/usr/bin/php /home/vagrant/code/laravel-worker/artisan queue:work
 autostart=true
 autorestart=true
 stopasgroup=true
@@ -37,7 +37,7 @@ killasgroup=true
 user=vagrant
 numprocs=8
 redirect_stderr=true
-stdout_logfile=/home/vagrant/code/laravel-queue/storage/logs/worker.log
+stdout_logfile=/home/vagrant/code/laravel-worker/storage/logs/worker.log
 stopwaitsecs=3600
 ```
 
