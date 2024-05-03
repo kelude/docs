@@ -58,5 +58,5 @@ redis-cli -h 127.0.0.1 -p 6379
 Redis configuration file
 
 ```shell
-sudo vim /etc/redis/redis.conf
+sudo nano /etc/redis/redis.conf
 ```

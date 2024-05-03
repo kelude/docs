@@ -77,7 +77,7 @@ sudo systemctl enable nginx
 ### Deploy a website with php-fpm
 
 ```shell
-sudo vim /etc/nginx/conf.d/example.conf
+sudo nano /etc/nginx/conf.d/example.com.conf
 ```
 
 ```nginx

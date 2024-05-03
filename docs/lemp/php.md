@@ -46,7 +46,7 @@ composer --version
 ### .user.ini
 
 ```shell
-sudo vim /var/www/example.com/.user.ini
+sudo nano /var/www/example.com/.user.ini
 ```
 
 ```
@@ -70,7 +70,7 @@ sudo chattr -i /var/www/example.com/.user.ini
 Tesing
 
 ```shell
-sudo vim /var/www/example.com/test.php
+sudo nano /var/www/example.com/test.php
 ```
 
 ```php

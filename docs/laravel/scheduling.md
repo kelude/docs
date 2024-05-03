@@ -1,4 +1,4 @@
-# Laravel Task Scheduling
+# Task Scheduling
 
 [Official Documentation](https://laravel.com/docs/scheduling)
 
@@ -9,5 +9,5 @@ crontab -e
 ```
 
 ```
-* * * * * cd /path/to/laravel && php artisan schedule:run >> /dev/null 2>&1
+* * * * * cd /home/vagrant/code/laravel && php artisan schedule:run >> /dev/null 2>&1
 ```

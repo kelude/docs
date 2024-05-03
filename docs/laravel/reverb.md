@@ -1,4 +1,4 @@
-# Laravel Reverb
+# Reverb
 
 [Official Documentation](https://laravel.com/docs/reverb)
 

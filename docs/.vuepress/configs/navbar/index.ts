@@ -37,6 +37,7 @@ export const navbar: NavbarConfig = [
             '/services/nodejs.md',
             '/services/certbot.md',
             '/services/minio.md',
+            '/services/supervisor.md',
         ],
     },
 ];

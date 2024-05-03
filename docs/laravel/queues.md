@@ -1,24 +1,8 @@
-# Laravel Queues
+# Queues
 
 [Official Documentation](https://laravel.com/docs/queues)
 
 ### Supervisor Configuration
-
-#### Installing Supervisor
-
-```shell
-sudo apt install supervisor
-```
-
-```shell
-sudo systemctl status supervisor
-
-sudo systemctl restart supervisor
-
-sudo systemctl stop supervisor
-
-sudo systemctl start supervisor
-```
 
 #### Configuring Supervisor
 

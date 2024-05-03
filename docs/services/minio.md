@@ -27,7 +27,7 @@ sudo chown minio-user:minio-user /mnt/disk1
 ### Create the Environment Variable File
 
 ```shell
-sudo vim /etc/default/minio
+sudo nano /etc/default/minio
 ```
 
 ```ini
@@ -82,7 +82,7 @@ sudo systemctl enable minio.service
 [Configure NGINX Proxy for MinIO Server](https://min.io/docs/minio/linux/integrations/setup-nginx-proxy-with-minio.html)
 
 ```shell
-sudo vim /etc/nginx/conf.d/minio.conf
+sudo nano /etc/nginx/conf.d/minio.conf
 ```
 
 ### Dedicated DNS
