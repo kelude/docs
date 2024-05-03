@@ -8,12 +8,14 @@
 
 ### Download the MinIO Server
 
+[MinIO Download](https://min.io/download)
+
 ```shell
-wget https://dl.min.io/server/minio/release/linux-amd64/archive/minio_20240330094156.0.0_amd64.deb -O minio.deb
+wget https://dl.min.io/server/minio/release/linux-amd64/minio_20240501011110.0.0_amd64.deb
 ```
 
 ```shell
-sudo dpkg -i minio.deb
+sudo dpkg -i minio_20240501011110.0.0_amd64.deb
 ```
 
 ### Add User and Group for MinIO
