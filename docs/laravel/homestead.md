@@ -63,6 +63,10 @@ sites:
       to: /home/vagrant/code/vue-project/dist
       type: "spa"
 
+    - map: vue-proxy.homestead.test
+      to: http://192.168.56.1:5173  # npm run dev -- --host
+      type: "proxy"
+
 databases:
     - homestead
 
