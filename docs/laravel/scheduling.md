@@ -9,5 +9,5 @@ crontab -e
 ```
 
 ```
-* * * * * cd /home/vagrant/code/laravel && php artisan schedule:run >> /dev/null 2>&1
+* * * * * cd /home/vagrant/code/laravel && /usr/bin/php artisan schedule:run >> /dev/null 2>&1
 ```
