@@ -18,6 +18,39 @@ wget https://dl.min.io/server/minio/release/linux-amd64/minio_20240501011110.0.0
 sudo dpkg -i minio_20240501011110.0.0_amd64.deb
 ```
 
+```shell
+lsblk
+```
+
+```shell
+sudo fdisk -l
+```
+
+```shell
+sudo mkfs.xfs /dev/sdb -L DISK1
+```
+
+```shell
+mkdir /mnt/disk1 
+```
+
+```shell
+sudo mount /dev/sdb /mnt/disk1 
+```
+
+```shell
+sudo nano /etc/fstab
+```
+
+```
+# <file system>  <mount point>  <type>  <options>         <dump>  <pass>
+LABEL=DISK1      /mnt/disk1     xfs     defaults,noatime  0       2
+```
+
+```shell
+df -h 
+```
+
 ### Add User and Group for MinIO
 
 ```shell
