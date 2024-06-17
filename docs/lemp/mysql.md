@@ -23,6 +23,24 @@ mysql  Ver 8.0.36-0ubuntu0.22.04.1 for Linux on x86_64 ((Ubuntu))
 ### Configuring MySQL
 
 ```shell
+sudo mysql
+```
+
+```sql
+ALTER USER 'root'@'localhost' IDENTIFIED BY RANDOM PASSWORD;
+```
+
+or
+
+```sql
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+```
+
+```sql
+exit;
+```
+
+```shell
 sudo mysql_secure_installation
 ```
 
@@ -145,7 +163,13 @@ CREATE USER 'example_user'@'localhost' IDENTIFIED WITH mysql_native_password BY 
 ```
 
 ```sql
-GRANT ALL ON example_database.* TO 'example_user'@'localhost';
+GRANT SELECT, INSERT, UPDATE, DELETE ON example_database.* TO 'example_user'@'localhost';
+```
+
+or
+
+```sql
+GRANT ALL PRIVILEGES ON example_database.* TO 'example_user'@'localhost';
 ```
 
 ```sql
