@@ -15,7 +15,7 @@ sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
 ```ini
 bind-address            = 0.0.0.0
 server-id               = 1
-log_bin          		= /var/log/mysql/mysql-bin.log
+log_bin          		    = /var/log/mysql/mysql-bin.log
 ```
 
 ```shell
@@ -54,9 +54,7 @@ sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
 ```ini
 bind-address            = 0.0.0.0
 server-id               = 2
-log_bin          		= /var/log/mysql/mysql-bin.log
-
-relay-log               = /var/log/mysql/mysql-relay-bin.log
+log_bin          		    = /var/log/mysql/mysql-bin.log
 ```
 
 ```shell
@@ -68,7 +66,12 @@ sudo mysql
 ```
 
 ```sql
-CHANGE REPLICATION SOURCE TO SOURCE_HOST='192.168.1.101', SOURCE_USER='replica_user', SOURCE_PASSWORD='password', SOURCE_LOG_FILE='mysql-bin.000001', SOURCE_LOG_POS=1577;
+CHANGE REPLICATION SOURCE TO
+SOURCE_HOST='192.168.1.101',
+SOURCE_USER='replica_user',
+SOURCE_PASSWORD='password',
+SOURCE_LOG_FILE='mysql-bin.000001',
+SOURCE_LOG_POS=1577;
 ```
 
 ```sql
