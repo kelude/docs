@@ -1,5 +1,6 @@
 # Ubuntu
 
+## Users
 
 ### delete user
 
@@ -12,6 +13,8 @@ sudo deluser --remove-home user1
 ```shell
 cat /etc/passwd
 ```
+
+## Networks
 
 ### Static IP
 
@@ -36,3 +39,5 @@ network:
 ```shell
 sudo netplan apply
 ```
+
+## Disks
