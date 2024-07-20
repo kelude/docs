@@ -11,7 +11,7 @@ sudo apt update
 ```
 
 ```shell
-sudo apt install php-{fpm,mysql,curl,xml,gd,zip,redis,imagick,mongodb}
+sudo apt install php-{fpm,mysql,curl,xml,gd,zip,redis,imagick,mbstring}
 ```
 
 ```shell
