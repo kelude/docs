@@ -41,3 +41,11 @@ sudo netplan apply
 ```
 
 ## Disks
+
+```shell
+sudo lvdisplay
+```
+
+```shell
+sudo lvextend -l +100%FREE -r /dev/ubuntu-vg/ubuntu-lv
+```
