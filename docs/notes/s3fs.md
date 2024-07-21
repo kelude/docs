@@ -2,6 +2,8 @@
 
 [s3fs](https://github.com/s3fs-fuse/s3fs-fuse)
 
+[s3fs-amazon-ec2-linux](https://aws.amazon.com/cn/blogs/china/s3fs-amazon-ec2-linux/)
+
 ### Install s3fs on Ubuntu
 
 ```shell
