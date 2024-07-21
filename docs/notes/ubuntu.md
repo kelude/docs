@@ -49,7 +49,3 @@ sudo lvdisplay
 ```shell
 sudo lvextend -l +100%FREE -r /dev/ubuntu-vg/ubuntu-lv
 ```
-
-```shell
-sudo resize2fs /dev/ubuntu-vg/ubuntu-lv
-```
