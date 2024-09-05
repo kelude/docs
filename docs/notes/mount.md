@@ -38,10 +38,6 @@ sudo unmount /mnt/disk01
 ```
 
 ```bash
-blkid
-```
-
-```bash
 sudo vi /etc/fstab
 ```
 
