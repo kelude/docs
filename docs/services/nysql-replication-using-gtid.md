@@ -1,6 +1,7 @@
 # MySQL Setting Up Replication Using GTIDs
 
 [Setting Up Replication Using GTIDs](https://dev.mysql.com/doc/mysql-replication-excerpt/8.0/en/replication-gtids-howto.html)
+
 [Setting up a basic GTID based MySQL Replication setup](https://medium.com/@nandagopal05/setting-up-a-basic-gtid-based-mysql-replication-setup-e615890672)
 
 ### Configure the Master Server
