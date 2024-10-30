@@ -52,6 +52,7 @@ log_bin                 = /var/log/mysql/mysql-bin.log
 
 gtid_mode = ON
 enforce-gtid-consistency = ON
+read_only = 1
 ```
 
 ```bash
