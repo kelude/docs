@@ -2,7 +2,7 @@
 
 ### Update the Package Index
 
-First, update the package index to ensure you have the latest information on available packages.
+First, update the package index to ensure the latest information on available packages.
 
 ```bash
 sudo apt update
@@ -15,6 +15,8 @@ Install the MySQL server package using the `apt` package manager.
 ```bash
 sudo apt install mysql-server
 ```
+
+Check the MySQL version:
 
 ```bash
 mysql -V
