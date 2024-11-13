@@ -16,10 +16,14 @@ bind-address            = 0.0.0.0
 
 server-id               = 1
 log_bin                 = /var/log/mysql/mysql-bin.log
+max_binlog_size   = 100M
 
 gtid_mode = ON
 enforce-gtid-consistency = ON
 
+binlog_format = ROW
+
+binlog_expire_logs_seconds = 604800 # MySQL 8.0.3+
 ```
 
 ```bash
@@ -48,11 +52,14 @@ sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
 bind-address            = 0.0.0.0
 
 server-id               = 2
-log_bin                 = /var/log/mysql/mysql-bin.log
 
 gtid_mode = ON
 enforce-gtid-consistency = ON
+
+binlog_format = ROW
+
 read_only = 1
+# super_read_only = 1
 ```
 
 ```bash
@@ -74,4 +81,8 @@ START REPLICA;
 
 ```sql
 SHOW REPLICA STATUS\G;
+```
+
+```sql
+SELECT * FROM performance_schema.replication_applier_status_by_worker;
 ```
