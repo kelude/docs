@@ -48,6 +48,8 @@ composer --version
 
 ### Setting `open_basedi`r in `.user.ini`
 
+WordPress example
+
 ```bash
 sudo nano /var/www/example.com/.user.ini
 ```
@@ -56,7 +58,7 @@ sudo nano /var/www/example.com/.user.ini
 open_basedir=/var/www/example.com/:/tmp/
 ```
 
-For Laravel App
+Laravel app example
 
 ```bash
 sudo nano /var/www/laravel-app/public/.user.ini
@@ -65,6 +67,8 @@ sudo nano /var/www/laravel-app/public/.user.ini
 ```
 open_basedir=/var/www/laravel-app.com/public/:/tmp/:/var/www/laravel-app.com/
 ```
+
+Set the immutable attribute
 
 ```bash
 sudo chattr +i /var/www/example.com/.user.ini
