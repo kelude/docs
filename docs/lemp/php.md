@@ -1,18 +1,19 @@
 # PHP
 
-### Installation
+### Add the Ondřej Surý PPA for PHP
 
-```shell
+```bash
 sudo add-apt-repository ppa:ondrej/php
-```
-
-```shell
 sudo apt update
 ```
 
+### Install PHP
+
 ```shell
-sudo apt install php-{fpm,mysql,curl,xml,gd,zip,redis,imagick,mbstring}
+sudo apt install php8.3-{cli,fpm,mysql,curl,xml,mbstring,gd,zip,redis,bcmath,json,imagick}
 ```
+
+### Check the PHP Version
 
 ```shell
 php -v
@@ -24,6 +25,8 @@ Copyright (c) The PHP Group
 Zend Engine v4.3.4, Copyright (c) Zend Technologies
     with Zend OPcache v8.3.4, Copyright (c), by Zend Technologies
 ```    
+
+### Check the PHP-FPM
 
 ```shell
 sudo systemctl status php8.3-fpm
