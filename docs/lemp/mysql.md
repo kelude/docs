@@ -1,16 +1,22 @@
 # MySQL
 
-### Installation
+### Update the Package Index
 
-```shell
+First, update the package index to ensure you have the latest information on available packages.
+
+```bash
 sudo apt update
 ```
 
-```shell
+### Install MySQL Server
+
+Install the MySQL server package using the `apt` package manager.
+
+```bash
 sudo apt install mysql-server
 ```
 
-```shell
+```bash
 mysql -V
 ```
 
@@ -20,27 +26,11 @@ Output
 mysql  Ver 8.0.36-0ubuntu0.22.04.1 for Linux on x86_64 ((Ubuntu))
 ```
 
-### Configuring MySQL
+### Secure MySQL Installation
 
-```shell
-sudo mysql
-```
+Run the `mysql_secure_installation` command to secure the MySQL installation. This step helps you set a root password, remove anonymous users, disable remote root login, and remove test databases.
 
-```sql
-ALTER USER 'root'@'localhost' IDENTIFIED BY RANDOM PASSWORD;
-```
-
-or
-
-```sql
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
-```
-
-```sql
-exit;
-```
-
-```shell
+```bash
 sudo mysql_secure_installation
 ```
 
@@ -159,14 +149,8 @@ CREATE USER 'example_user'@'localhost' IDENTIFIED BY RANDOM PASSWORD;
 ```
 
 ```sql
-CREATE USER 'example_user'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+CREATE USER 'example_user'@'localhost' IDENTIFIED BY 'password';
 ```
-
-```sql
-GRANT SELECT, INSERT, UPDATE, DELETE ON example_database.* TO 'example_user'@'localhost';
-```
-
-or
 
 ```sql
 GRANT ALL PRIVILEGES ON example_database.* TO 'example_user'@'localhost';
