@@ -9,13 +9,13 @@ sudo apt update
 
 ### Install PHP
 
-```shell
+```bash
 sudo apt install php8.3-{cli,fpm,mysql,curl,xml,mbstring,gd,zip,redis,bcmath,json,imagick}
 ```
 
 ### Check the PHP Version
 
-```shell
+```bash
 php -v
 ```
 
@@ -28,13 +28,13 @@ Zend Engine v4.3.4, Copyright (c) Zend Technologies
 
 ### Check the PHP-FPM
 
-```shell
+```bash
 sudo systemctl status php8.3-fpm
 ```
 
 ### Composer
 
-```shell
+```bash
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 
 php composer-setup.php --install-dir=/usr/local/bin --filename=composer
@@ -42,13 +42,13 @@ php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 php -r "unlink('composer-setup.php');"
 ```
 
-```shell
+```bash
 composer --version
 ```
 
-### .user.ini
+### Setting `open_basedi`r in `.user.ini`
 
-```shell
+```bash
 sudo nano /var/www/example.com/.user.ini
 ```
 
@@ -58,21 +58,25 @@ open_basedir=/var/www/example.com/:/tmp/
 
 For Laravel App
 
+```bash
+sudo nano /var/www/laravel-app/public/.user.ini
+```
+
 ```
 open_basedir=/var/www/laravel-app.com/public/:/tmp/:/var/www/laravel-app.com/
 ```
 
-```shell
+```bash
 sudo chattr +i /var/www/example.com/.user.ini
 ```
 
-```shell
+```bash
 sudo chattr -i /var/www/example.com/.user.ini
 ```
 
 Tesing
 
-```shell
+```bash
 sudo nano /var/www/example.com/test.php
 ```
 
