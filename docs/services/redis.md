@@ -1,6 +1,6 @@
 # Redis
 
-[Install Redis server on Ubuntu/Debian](https://redis.io/docs/install/install-redis/install-redis-on-linux/)
+[Install Redis on Linux](https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install-redis-on-linux/)
 
 ### Installation
 
