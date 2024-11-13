@@ -61,7 +61,7 @@ open_basedir=/var/www/example.com/:/tmp/
 Laravel app example
 
 ```bash
-sudo nano /var/www/laravel-app/public/.user.ini
+sudo nano /var/www/laravel-app.com/public/.user.ini
 ```
 
 ```
