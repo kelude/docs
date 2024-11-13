@@ -6,6 +6,8 @@
 
 ### Configure the Master Server
 
+Edit the MySQL configuration file
+
 ```bash
 sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
 ```
@@ -21,14 +23,18 @@ max_binlog_size   = 100M
 gtid_mode = ON
 enforce-gtid-consistency = ON
 
-binlog_format = ROW
+binlog_format = ROW # Recommended binlog format
 
 binlog_expire_logs_seconds = 604800 # MySQL 8.0.3+
 ```
 
+Restart the MySQL service to apply the changes:
+
 ```bash
 sudo systemctl restart mysql
 ```
+
+Create a user for replication on the master server:
 
 ```sql
 CREATE USER 'replicator'@'%' IDENTIFIED WITH mysql_native_password BY 'password';
@@ -36,12 +42,21 @@ GRANT REPLICATION SLAVE ON *.* TO 'replicator'@'%';
 FLUSH PRIVILEGES;
 ```
 
+#### Checking Binary Log Position
+
+Run the following command on the master server to record the current binary log position:
+
 ```sql
 SHOW MASTER STATUS;
+```
+
+```sql
 SHOW REPLICAS;
 ```
 
 ### Configure the Replica Server
+
+Edit the `mysqld.cnf` file on the replica server:
 
 ```bash
 sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
@@ -62,9 +77,15 @@ read_only = 1
 # super_read_only = 1
 ```
 
+Restart the MySQL service:
+
 ```bash
 sudo systemctl restart mysql
 ```
+
+#### Setting Up Replication on the Replica Server
+
+Log into the MySQL console on the replica server and run:
 
 ```sql
 CHANGE REPLICATION SOURCE TO
@@ -79,9 +100,13 @@ CHANGE REPLICATION SOURCE TO
 START REPLICA;
 ```
 
+#### Verifying the Replication Status
+
 ```sql
 SHOW REPLICA STATUS\G;
 ```
+
+Ensure that `Replica_IO_Running` and `Replica_SQL_Running` are both `Yes` and that there are no errors.
 
 ```sql
 SELECT * FROM performance_schema.replication_applier_status_by_worker;
