@@ -32,7 +32,7 @@ Zend Engine v4.3.4, Copyright (c) Zend Technologies
 sudo systemctl status php8.3-fpm
 ```
 
-### Composer
+### Install Composer
 
 ```bash
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
