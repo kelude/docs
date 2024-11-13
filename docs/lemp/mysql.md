@@ -30,7 +30,7 @@ mysql  Ver 8.0.36-0ubuntu0.22.04.1 for Linux on x86_64 ((Ubuntu))
 
 ### Secure MySQL Installation
 
-Run the `mysql_secure_installation` command to secure the MySQL installation. This step helps you set a root password, remove anonymous users, disable remote root login, and remove test databases.
+Run the `mysql_secure_installation` command to secure the MySQL installation.
 
 ```bash
 sudo mysql_secure_installation
