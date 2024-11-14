@@ -156,6 +156,7 @@ CREATE USER 'example_user'@'localhost' IDENTIFIED BY 'password';
 
 ```sql
 GRANT ALL PRIVILEGES ON example_database.* TO 'example_user'@'localhost';
+FLUSH PRIVILEGES;
 ```
 
 ```sql
