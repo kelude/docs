@@ -4,8 +4,16 @@
 
 [fhs-install-v2ray](https://github.com/v2fly/fhs-install-v2ray)
 
-```shell
-bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)
+
+### Download the installation script
+```bash
+curl -O https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh
+```
+
+### Execute Installation
+
+```bash
+bash install-release.sh
 ```
 
 ```text
@@ -21,19 +29,23 @@ installed: /etc/systemd/system/v2ray.service
 installed: /etc/systemd/system/v2ray@.service
 ```
 
-```shell
-sudo systemctl enable v2ray
-```
+### Run V2Ray
 
-```shell
+```bash
 sudo systemctl start v2ray
 ```
 
-```shell
+Set V2Ray to start automatically at boot:
+
+```bash
+sudo systemctl enable v2ray
+```
+
+```bash
 uuidgen
 ```
 
-```shell
+```bash
 sudo nano /usr/local/etc/v2ray/config.json
 ```
 
@@ -69,47 +81,53 @@ sudo nano /usr/local/etc/v2ray/config.json
 }
 ```
 
-```shell
+```bash
 sudo systemctl restart v2ray
 ```
 
-```shell
+```bash
 sudo systemctl status v2ray
+```
+
+### Update V2Ray
+
+```bash
+bash install-release.sh
 ```
 
 ### Caddy
 
-```shell
+```bash
 sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https
 ```
 
-```shell
+```bash
 curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' \
   | sudo gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
 ```
 
-```shell
+```bash
 curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' \
   | sudo tee /etc/apt/sources.list.d/caddy-stable.list
 ```
 
-```shell
+```bash
 sudo apt update
 ```
 
-```shell
+```bash
 sudo apt install caddy
 ```
 
-```shell
+```bash
 sudo systemctl status caddy
 ```
 
-```shell
+```bash
 cp /etc/caddy/Caddyfile /etc/caddy/Caddyfile.default
 ```
 
-```shell
+```bash
 sudo nano /etc/caddy/Caddyfile
 ```
 
@@ -132,18 +150,18 @@ mydomain.me {
 }
 ```
 
-```shell
+```bash
 sudo systemctl restart caddy
 ```
 
 ## Update `.dat`
 
-```shell
+```bash
 bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-dat-release.sh)
 ```
 
 ## Remove V2Ray
 
-```shell
+```bash
 bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh) --remove
 ```
