@@ -18,14 +18,13 @@ bind-address            = 0.0.0.0
 
 server-id               = 1
 log_bin                 = /var/log/mysql/mysql-bin.log
+binlog_expire_logs_seconds    = 2592000
 max_binlog_size   = 100M
 
 gtid_mode = ON
 enforce-gtid-consistency = ON
 
 binlog_format = ROW # Recommended binlog format
-
-binlog_expire_logs_seconds = 604800 # MySQL 8.0.3+
 ```
 
 Restart the MySQL service to apply the changes:
