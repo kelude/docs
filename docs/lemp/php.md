@@ -10,7 +10,7 @@ sudo apt update
 ### Install PHP
 
 ```bash
-sudo apt install php8.3-{cli,fpm,mysql,curl,xml,mbstring,gd,zip,redis,bcmath,json,imagick}
+sudo apt install php8.3-{cli,fpm,mysql,curl,xml,mbstring,gd,zip,redis,bcmath,imagick}
 ```
 
 ### Check the PHP Version
