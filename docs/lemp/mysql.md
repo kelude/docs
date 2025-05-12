@@ -145,7 +145,7 @@ CREATE USER 'example_user'@'%' IDENTIFIED BY RANDOM PASSWORD;
 +----------------+-----------+----------------------+-------------+
 | user           | host      | generated password   | auth_factor |
 +----------------+-----------+----------------------+-------------+
-| example_user   | localhost | 3u5][_hSi{Z(+YS;;(pk |           1 |
+| example_user   | %         | 3u5][_hSi{Z(+YS;;(pk |           1 |
 +----------------+-----------+----------------------+-------------+
 1 row in set (0.13 sec)
 ```
