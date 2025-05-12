@@ -186,3 +186,12 @@ mysql -u root -p example_database < dump.sql
 ```sql
 source dump.sql
 ```
+
+```bash
+sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+```
+
+```ini
+[mysqld]
+bind-address            = 0.0.0.0
+```
