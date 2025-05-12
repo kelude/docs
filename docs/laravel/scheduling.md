@@ -5,9 +5,9 @@
 ### Running the Scheduler
 
 ```shell
-crontab -e
+sudo crontab -u www-data -e
 ```
 
 ```
-* * * * * cd /home/vagrant/code/laravel && /usr/bin/php artisan schedule:run >> /dev/null 2>&1
+* * * * * cd /var/wwww/laravel && /usr/bin/php artisan schedule:run >> /dev/null 2>&1
 ```
