@@ -195,3 +195,7 @@ sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
 [mysqld]
 bind-address            = 0.0.0.0
 ```
+
+```bash
+sudo systemctl restart mysql
+```
