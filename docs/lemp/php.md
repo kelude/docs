@@ -20,16 +20,16 @@ php -v
 ```
 
 ```
-PHP 8.3.4 (cli) (built: Mar 16 2024 08:40:08) (NTS)
+PHP 8.4.7 (cli) (built: May  9 2025 06:54:31) (NTS)
 Copyright (c) The PHP Group
-Zend Engine v4.3.4, Copyright (c) Zend Technologies
-    with Zend OPcache v8.3.4, Copyright (c), by Zend Technologies
+Zend Engine v4.4.7, Copyright (c) Zend Technologies
+    with Zend OPcache v8.4.7, Copyright (c), by Zend Technologies
 ```    
 
 ### Check the PHP-FPM
 
 ```bash
-sudo systemctl status php8.3-fpm
+sudo systemctl status php8.4-fpm
 ```
 
 ### Install Composer
