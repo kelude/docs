@@ -12,16 +12,16 @@ winget install --id Git.Git -e --source winget
 
 #### Configuring core.sshCommand
 
-```shell
-git clone -c "core.sshCommand=ssh -i ~/.ssh/id_rsa_other" git@github.com:user/project.git
+```bash
+git clone -c "core.sshCommand=ssh -i ~/.ssh/id_rsa_other -o IdentitiesOnly=yes" git@github.com:user/project.git
+```
+
+```bash
+git config core.sshCommand
 ```
 
 #### Persisting core.sshCommand on Repository Level
 
 ```shell
 git config core.sshCommand "ssh -i ~/.ssh/id_rsa_other"
-```
-
-```shell
-git config --get core.sshCommand
 ```
