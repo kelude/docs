@@ -12,11 +12,11 @@ sudo nano /etc/supervisor/conf.d/laravel-reverb.conf
 
 ```ini
 [program:laravel-reverb]
-command=/usr/bin/php /home/vagrant/code/laravel-reverb/artisan reverb:start
+command=/usr/bin/php /var/www/laravel-reverb/artisan reverb:start
 numprocs=1
 autostart=true
 autorestart=true
-user=vagrant
+user=www-data
 ```
 
 #### Starting Supervisor
