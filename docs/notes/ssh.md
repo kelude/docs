@@ -5,7 +5,7 @@
 ### Generate a new SSH key
 
 ```shell
-ssh-keygen
+ssh-keygen -t rsa -b 4096
 ```
 
 ### Upload public key
