@@ -6,6 +6,11 @@
 
 #### Configuring Supervisor
 
+```bash
+sudo mkdir /var/log/laravel-worker
+sudo chown -R www-data:www-data /var/log/laravel-worker
+```
+
 ```shell
 sudo nano /etc/supervisor/conf.d/laravel-worker.conf
 ```
