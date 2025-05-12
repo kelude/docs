@@ -31,6 +31,39 @@ sudo apt-get install -y mongodb-org
 ```
 
 
+```bash
+sudo systemctl start mongod
+```
+
+```bash
+sudo systemctl daemon-reload
+```
+
+```bash
+sudo systemctl status mongod
+```
+
+```bash
+sudo systemctl enable mongod
+```
+
+```bash
+sudo systemctl stop mongod
+```
+
+```bash
+sudo systemctl restart mongod
+```
+
+```bash
+sudo apt install php-mongodb
+```
+
+```bash
+mongosh
+```
+
+
 
 
 
