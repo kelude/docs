@@ -138,7 +138,7 @@ CREATE DATABASE example_database CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_c
 ```
 
 ```sql
-CREATE USER 'example_user'@'localhost' IDENTIFIED BY RANDOM PASSWORD;
+CREATE USER 'example_user'@'%' IDENTIFIED BY RANDOM PASSWORD;
 ```
 
 ```
@@ -151,11 +151,11 @@ CREATE USER 'example_user'@'localhost' IDENTIFIED BY RANDOM PASSWORD;
 ```
 
 ```sql
-CREATE USER 'example_user'@'localhost' IDENTIFIED BY 'password';
+CREATE USER 'example_user'@'%' IDENTIFIED BY 'password';
 ```
 
 ```sql
-GRANT ALL PRIVILEGES ON example_database.* TO 'example_user'@'localhost';
+GRANT ALL PRIVILEGES ON example_database.* TO 'example_user'@'%';
 FLUSH PRIVILEGES;
 ```
 
