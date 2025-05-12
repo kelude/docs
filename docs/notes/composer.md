@@ -10,6 +10,10 @@ sudo nano composer.json
 {
   "repositories": [
     {
+      "type": "vcs",
+      "url": "https://github.com/vendor/repo.git",
+    },
+    {
       "type": "path",
       "url": "/path/to/package/name",
       "options": {
@@ -21,5 +25,5 @@ sudo nano composer.json
 ```
 
 ```shell
-composer require package/name
+composer require package/name:dev-main
 ```
