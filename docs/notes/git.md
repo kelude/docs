@@ -1,5 +1,11 @@
 # git
 
+## Install git on Windows
+
+```shell
+winget install --id Git.Git -e --source winget
+```
+
 ## Using a Specific SSH Private Key When Using Git Command
 
 ### Using core.sshCommand
