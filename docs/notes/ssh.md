@@ -53,5 +53,5 @@ chmod 600 ~/.ssh/id_rsa
 ## Specify private key
 
 ```shell
-ssh -i "C:\Users\USER\.ssh\id_rsa_other" root@192.168.2.3
+ssh -i "~/.ssh/id_rsa_other" ubuntu@192.168.1.100
 ```
