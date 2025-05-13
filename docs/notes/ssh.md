@@ -4,8 +4,12 @@
 
 ### Generate a new SSH key
 
-```shell
+```bash
 ssh-keygen -t rsa -b 4096
+```
+
+```bash
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
 
 ### Upload public key
