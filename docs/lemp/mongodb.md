@@ -59,6 +59,19 @@ sudo systemctl restart mongod
 sudo apt install php-mongodb
 ```
 
+### Bind IP
+
+```bash
+sudo nano /etc/mongod.conf
+```
+
+```yaml
+# network interfaces
+net:
+  port: 27017
+  bindIp: 0.0.0.0
+```
+
 ## mongosh
 
 [MongoDB Shell (mongosh)](https://www.mongodb.com/zh-cn/docs/mongodb-shell/)
