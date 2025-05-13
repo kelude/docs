@@ -1,13 +1,16 @@
 # Composer
 
-```shell
+```bash
 composer install --no-dev --prefer-dist --optimize-autoloader
+```
+
+```bash
 composer update --no-dev --prefer-dist --optimize-autoloader
 ```
 
 ## Composer local repository
 
-```shell
+```bash
 sudo nano composer.json
 ```
 
