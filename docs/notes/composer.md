@@ -1,5 +1,10 @@
 # Composer
 
+```shell
+composer install --no-dev --prefer-dist --optimize-autoloader
+composer update --no-dev --prefer-dist --optimize-autoloader
+```
+
 ## Composer local repository
 
 ```shell
