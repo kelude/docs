@@ -11,6 +11,10 @@ winget install --id Git.Git -e --source winget
 ### Using core.sshCommand
 
 ```bash
+git config core.sshCommand "ssh -i ~/.ssh/id_rsa_personal -o IdentitiesOnly=yes"
+```
+
+```bash
 git clone -c "core.sshCommand=ssh -i ~/.ssh/id_rsa_github -o IdentitiesOnly=yes" git@github.com:user/repo.git
 ```
 
