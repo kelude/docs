@@ -165,3 +165,31 @@ bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/
 ```bash
 bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh) --remove
 ```
+
+
+
+
+```json
+{
+  "inbounds": [
+    {
+      "port": 10240,
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "7688b7aa-a203-4b76-90f7-ce8bfd452127",
+            "alterId": 0
+          }
+        ]
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    }
+  ]
+}
+```
