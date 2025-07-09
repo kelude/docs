@@ -2,8 +2,11 @@
 
 ```
 composer global require laravel/installer
+```
+
 laravel: command not found
 
+```
 composer global config bin-dir --absolute
 
 sudo nano ~/.bashrc
