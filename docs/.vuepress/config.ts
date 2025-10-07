@@ -5,7 +5,7 @@ import { navbar, sidebar } from "./configs/index";
 import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 
 export default defineUserConfig({
-  base: "/",
+  base: "/docs/",
 
   locales: {
     "/": {
