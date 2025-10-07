@@ -1,3 +1,7 @@
+---
+outline: deep
+---
+
 # Queues
 
 [Official Documentation](https://laravel.com/docs/queues)

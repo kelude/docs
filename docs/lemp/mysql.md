@@ -1,3 +1,7 @@
+---
+outline: deep
+---
+
 # MySQL
 
 ### Update the Package Index

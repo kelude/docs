@@ -1,3 +1,7 @@
+---
+outline: deep
+---
+
 # Task Scheduling
 
 [Official Documentation](https://laravel.com/docs/scheduling)

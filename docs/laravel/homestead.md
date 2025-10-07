@@ -1,3 +1,7 @@
+---
+outline: deep
+---
+
 # Homestead
 
 [Official Documentation](https://laravel.com/docs/homestead)

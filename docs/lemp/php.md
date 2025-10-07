@@ -1,3 +1,7 @@
+---
+outline: deep
+---
+
 # PHP
 
 ### Add the Ondřej Surý PPA for PHP

@@ -1,3 +1,7 @@
+---
+outline: deep
+---
+
 # MongoDB
 
 ## Install MongoDB Community Edition on Ubuntu

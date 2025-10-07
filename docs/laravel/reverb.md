@@ -1,3 +1,7 @@
+---
+outline: deep
+---
+
 # Reverb
 
 [Official Documentation](https://laravel.com/docs/reverb)
