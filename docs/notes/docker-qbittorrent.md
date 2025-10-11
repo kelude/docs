@@ -75,3 +75,17 @@ Default credentials:
 - Password: `adminadmin`
 
 > Make sure to change the password after your first login.
+
+### New version
+
+```bash
+docker compose logs -f qbittorrent
+```
+
+```
+qbittorrent  | ******** Information ********
+qbittorrent  | To control qBittorrent, access the WebUI at: http://localhost:8080
+qbittorrent  | The WebUI administrator username is: admin
+qbittorrent  | The WebUI administrator password was not set. A temporary password is provided for this session: `YOUR-PASSWORD`
+qbittorrent  | You should set your own password in program preferences.
+```
