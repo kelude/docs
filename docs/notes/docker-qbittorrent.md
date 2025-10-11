@@ -1,6 +1,6 @@
 # docker-qbittorrent
 
-## 创建配置目录
+## Create Configuration and Downloads Directories
 
 ```bash
 mkdir -p /mnt/disk01/qbittorrent/config
@@ -11,13 +11,13 @@ mkdir -p /mnt/disk01/downloads
 sudo chown -R 1000:1000 /mnt/disk01/qbittorrent/config /mnt/disk01/downloads
 ```
 
-## 创建 docker-compose.yml
+## Create `docker-compose.yml`
 
 ```bash
 sudo nano /mnt/disk01/qbittorrent/docker-compose.yml
 ```
 
-```yml
+```yaml
 services:
   qbittorrent:
     image: lscr.io/linuxserver/qbittorrent:latest
@@ -38,38 +38,40 @@ services:
     restart: unless-stopped
 ```
 
-## 启动容器
+## Start the Container
 
 ```bash
 docker compose up -d
 ```
 
-## 停止容器
+## Stop the Container
 
 ```bash
 docker compose down
 ```
 
-### 更新镜像并重启
+### Update the Image and Restart
 
 ```bash
 docker compose pull
 docker compose up -d
 ```
 
-## 查看日志
+## View Logs
 
 ```bash
 docker compose logs -f qbittorrent
 ```
 
-## 访问 Web UI
+## Access the Web UI
 
-```
+```cpp
 http://<server-IP>:8080
 ```
 
->>>
-默认用户名：`admin`  
-默认密码：`adminadmin`
->>>
+Default credentials:
+
+- Username: `admin`  
+- Password: `adminadmin`
+
+> Make sure to change the password after your first login.
