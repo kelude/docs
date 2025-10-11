@@ -7,6 +7,8 @@ mkdir -p /mnt/disk01/qbittorrent/config
 mkdir -p /mnt/disk01/downloads
 ```
 
+optionnal
+
 ```bash
 sudo chown -R 1000:1000 /mnt/disk01/qbittorrent/config /mnt/disk01/downloads
 ```
