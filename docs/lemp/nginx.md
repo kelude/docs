@@ -29,7 +29,7 @@ gpg --dry-run --quiet --no-keyring --import --import-options import-show /usr/sh
 The output should contain the full fingerprint `573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62` as follows:
 
 ```
-pub   rsa2048 2011-08-19 [SC] [expires: 2024-06-14]
+pub   rsa2048 2011-08-19 [SC] [expires: 2027-05-24]
       573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62
 uid                      nginx signing key <signing-key@nginx.com>
 ```
@@ -57,6 +57,8 @@ To install nginx, run the following commands:
 sudo apt update
 sudo apt install nginx
 ```
+
+## commands
 
 ```shell
 sudo systemctl status nginx
