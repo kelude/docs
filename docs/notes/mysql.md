@@ -78,3 +78,7 @@ bind-address            = 0.0.0.0
 ```bash
 sudo systemctl restart mysql
 ```
+
+```sql
+SELECT user, host FROM mysql.user;
+```
