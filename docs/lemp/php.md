@@ -40,7 +40,7 @@ sudo systemctl status php8.4-fpm
 
 ## Install Composer
 
-Download and verify the Composer installer:
+Download the Composer installer:
 
 ```bash
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
@@ -50,7 +50,11 @@ Install globally:
 
 ```bash
 sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+```
 
+Remove installer:
+
+```bash
 php -r "unlink('composer-setup.php');"
 ```
 
