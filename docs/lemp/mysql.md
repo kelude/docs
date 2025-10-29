@@ -107,14 +107,9 @@ sudo mysql_secure_installation
 
 This script will guide you through several security options, including:
 
-- Enabling the Validate Password Component (recommended for strong password policies).
+- Enabling the VALIDATE PASSWORD Component (recommended for strong password policies).
 - Changing the root password (if not already set or if you want to change it).
 - Removing anonymous users.
 - Disallowing root login remotely.
 - Removing the test database and access to it.
 - Reloading privilege tables.
-
-Recommended production answers:
-
-- Would you like to setup VALIDATE PASSWORD component? **Y**
-- Please enter 0 = LOW, 1 = MEDIUM and 2 = STRONG: **2**
