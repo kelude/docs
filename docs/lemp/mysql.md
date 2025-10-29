@@ -84,7 +84,7 @@ mysql -V
 Expected output (example):
 
 ```
-mysql  Ver 8.0.36-0ubuntu0.22.04.1 for Linux on x86_64 ((Ubuntu))
+mysql  Ver 8.4.7 for Linux on x86_64 (MySQL Community Server - GPL)
 ```
 
 You can also confirm from inside MySQL:
