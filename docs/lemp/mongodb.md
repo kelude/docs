@@ -108,7 +108,9 @@ mongosh --host mongodb.example.com --port 27017 --username alice@dba.example.com
 db
 
 show dbs
-use games_dev
+
+use my_db
+
 show collections
 ```
 
