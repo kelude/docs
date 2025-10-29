@@ -140,7 +140,7 @@ Now that the root user is configured for password authentication, you can run th
    ```
 
 2. Follow the on-screen prompts to configure your server's security settings.
-   - Enter password for user root: Re-enter the password you set in the previous step.
+   - Enter password for user root: Enter the password you set in the previous step.
    - VALIDATE PASSWORD COMPONENT:  
      Press y|Y for Yes, any other key for No: `y`  
      Please enter 0 = LOW, 1 = MEDIUM and 2 = STRONG: `2`  
