@@ -6,8 +6,6 @@ outline: deep
 
 [Official Documentation](https://nginx.org/en/linux_packages.html#Ubuntu)
 
-## Installation
-
 Install the prerequisites:
 
 ```shell
