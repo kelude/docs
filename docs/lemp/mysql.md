@@ -47,6 +47,8 @@ sudo apt update
 apt-cache policy mysql-server
 ```
 
+Expected output (example):
+
 ```yaml
 mysql-server:
   Installed: (none)
