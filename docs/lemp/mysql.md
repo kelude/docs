@@ -111,10 +111,10 @@ The `mysql_secure_installation` script will fail if you don't first set up a pas
    sudo mysql
    ```
 
-2. Alter the `root` user:
+2. Change the `root` user to use the modern plugin:
 
    ```sql
-   ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_password';
+   ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'your_password';
    ```
 
    Replace `your_password` with a strong, secure password.
