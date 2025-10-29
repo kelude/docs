@@ -113,3 +113,8 @@ This script will guide you through several security options, including:
 - Disallowing root login remotely.
 - Removing the test database and access to it.
 - Reloading privilege tables.
+
+Recommended production answers:
+
+- Would you like to setup VALIDATE PASSWORD component? **Y**
+- Please enter 0 = LOW, 1 = MEDIUM and 2 = STRONG: **2**
