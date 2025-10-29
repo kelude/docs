@@ -2,7 +2,7 @@
 
 This guide explains how to install and configure Xray with VLESS + WebSocket + TLS, using Caddy as the reverse proxy and TLS provider.
 
-## 🧩 1. Installation
+## Installation
 
 Official installation script from [XTLS/Xray-install](https://github.com/XTLS/Xray-install):
 
@@ -17,7 +17,7 @@ xray version
 xray uuid
 ```
 
-## ⚙️ 2. Xray Configuration
+## Xray Configuration
 
 Edit the configuration file:
 
@@ -68,7 +68,7 @@ systemctl restart xray
 systemctl status xray
 ```
 
-## 🔗 3. VLESS Client URL
+## VLESS Client URL
 
 Use the following URL format to connect:
 
@@ -78,7 +78,7 @@ vless://YOUR-UUID@ws.example.com:443?encryption=none&security=tls&type=ws&host=w
 
 > Replace `YOUR-UUID` and `ws.example.com` with your actual UUID and domain name.
 
-## 🌐 4. Caddy Configuration (TLS + Reverse Proxy)
+## Caddy Configuration
 
 Official Caddy installation guide for Debian/Ubuntu/Raspbian:
 
@@ -131,7 +131,7 @@ caddy reload --config /etc/caddy/Caddyfile
 systemctl status caddy
 ```
 
-## ✅ 5. Done!
+## Done!
 
 Your VLESS + WS + TLS setup is now complete.
 
