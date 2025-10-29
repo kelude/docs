@@ -154,7 +154,7 @@ To return to the more secure `auth_socket` authentication method for local root 
 
 1. Log back in to the MySQL shell:
    ```bash
-   sudo mysql
+   sudo mysql -u root -p
    ```
    
 2. Revert the plugin:
