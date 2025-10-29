@@ -55,5 +55,8 @@ To install nginx, run the following commands:
 
 ```bash
 sudo apt update
+```
+
+```bash
 sudo apt install nginx
 ```
