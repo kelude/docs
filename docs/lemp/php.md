@@ -10,6 +10,9 @@ outline: deep
 
 ```bash
 sudo add-apt-repository ppa:ondrej/php
+```
+
+```bash
 sudo apt update
 ```
 
