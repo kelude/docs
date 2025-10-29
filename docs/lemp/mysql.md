@@ -112,7 +112,10 @@ The `mysql_secure_installation` script will fail if you don't first set up a pas
    ```
 
 2. Change the `root` user to use the modern plugin:
-
+   ```sql
+   SELECT user, host FROM mysql.user;
+   ```
+   
    ```sql
    ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'your_password';
    ```
