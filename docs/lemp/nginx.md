@@ -44,14 +44,6 @@ http://nginx.org/packages/ubuntu `lsb_release -cs` nginx" \
     | sudo tee /etc/apt/sources.list.d/nginx.list
 ```
 
-If you would like to use mainline nginx packages, run the following command instead:
-
-```shell
-echo "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] \
-http://nginx.org/packages/mainline/ubuntu `lsb_release -cs` nginx" \
-    | sudo tee /etc/apt/sources.list.d/nginx.list
-```
-
 Set up repository pinning to prefer our packages over distribution-provided ones:
 
 ```shell
