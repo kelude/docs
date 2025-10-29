@@ -23,7 +23,7 @@ wget https://dev.mysql.com/get/mysql-apt-config_0.8.36-1_all.deb
 sudo dpkg -i mysql-apt-config_0.8.36-1_all.deb
 ```
 
-If your `wget` command can not found:
+If your `wget` command can not be found:
 
 ```bash
 sudo apt install wget gnupg lsb-release -y
