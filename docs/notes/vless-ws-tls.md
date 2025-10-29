@@ -18,6 +18,9 @@ After installation, check your Xray version and generate a UUID:
 
 ```bash
 xray version
+```
+
+```bash
 xray uuid
 ```
 
@@ -87,6 +90,38 @@ vless://YOUR-UUID@ws.example.com:443?encryption=none&security=tls&type=ws&host=w
 Official Caddy installation guide for Debian/Ubuntu/Raspbian:
 
 👉 [Caddy Documentation](https://caddyserver.com/docs/install#debian-ubuntu-raspbian)
+
+```bash
+sudo apt update
+```
+
+```bash
+sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https curl
+```
+
+```bash
+curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | sudo gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
+```
+
+```bash
+curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo tee /etc/apt/sources.list.d/caddy-stable.list
+```
+
+```bash
+chmod o+r /usr/share/keyrings/caddy-stable-archive-keyring.gpg
+```
+
+```bash
+chmod o+r /etc/apt/sources.list.d/caddy-stable.list
+```
+
+```bash
+sudo apt update
+```
+
+```bash
+sudo apt install caddy
+```
 
 ### Check Caddy Installation
 
