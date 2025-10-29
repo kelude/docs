@@ -2,7 +2,9 @@
 outline: deep
 ---
 
-# MySQL
+# Install MySQL 8.4 on Ubuntu Server
+
+[Official Documentation](https://dev.mysql.com/doc/refman/8.4/en/linux-installation-apt-repo.html)
 
 ### Update the Package Index
 
