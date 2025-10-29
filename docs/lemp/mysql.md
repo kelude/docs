@@ -131,18 +131,18 @@ exit;
 Now that the root user is configured for password authentication, you can run the `mysql_secure_installation` script safely.
 
 1. Execute the command:
-
-```bash
-sudo mysql_secure_installation
-```
+  ```bash
+  sudo mysql_secure_installation
+  ```
 
 2. Follow the on-screen prompts to configure your server's security settings.
 
-- VALIDATE PASSWORD COMPONENT: Choose your desired password validation policy.
-- New password for root: Re-enter the password you set in the previous step.
-- Remove anonymous users?: Enter y.
-- Disallow root login remotely?: Enter y.
-- Remove test database and access to it?: Enter y.
+  - VALIDATE PASSWORD COMPONENT: Choose your desired password validation policy.
+  - New password for root: Re-enter the password you set in the previous step.
+  - Remove anonymous users?: Enter `y`.
+  - Disallow root login remotely?: Enter `y`.
+  - Remove test database and access to it?: Enter `y`.
+  - Reload privilege tables now?: Enter `y`
 
 ## Revert the authentication plugin (optional)
 
@@ -159,7 +159,6 @@ To return to the more secure `auth_socket` authentication method for local root 
    ```
    
 5. Exit the shell:
-
   ```sql
   exit;
   ```
