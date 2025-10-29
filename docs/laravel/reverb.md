@@ -16,11 +16,16 @@ sudo nano /etc/supervisor/conf.d/laravel-reverb.conf
 
 ```ini
 [program:laravel-reverb]
-command=/usr/bin/php /var/www/laravel-reverb/artisan reverb:start
-numprocs=1
+process_name=%(program_name)s_%(process_num)02d
+command=php /var/www/laravel-reverb/artisan reverb:start
 autostart=true
 autorestart=true
+stopasgroup=true
+killasgroup=true
 user=www-data
+numprocs=1
+redirect_stderr=true
+stdout_logfile=/var/www/laravel-reverb/reverb.log
 ```
 
 #### Starting Supervisor
