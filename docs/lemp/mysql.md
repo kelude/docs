@@ -73,6 +73,10 @@ sudo apt install mysql-server
 
 This installs and starts the MySQL 8.4 service automatically.
 
+```bash
+sudo systemctl status mysql
+```
+
 ## Verify Installation
 
 Check the version:
