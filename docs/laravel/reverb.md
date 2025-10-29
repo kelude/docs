@@ -69,14 +69,3 @@ server {
     }
 }
 ```
-
-### Laravel Homestead
-
-`Homestead.yaml`
-
-```yaml
-sites:
-    - map: reverb.homestead.test
-      to: http://0.0.0.0:8080
-      type: "proxy"
-```
