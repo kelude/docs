@@ -62,7 +62,7 @@ Group=www-data
 WorkingDirectory=/var/www/your-laravel-app
 
 # Run the scheduler
-ExecStart=/usr/bin/php artisan schedule:run
+ExecStart=php artisan schedule:run
 
 # Run once and exit
 Type=oneshot
@@ -131,4 +131,12 @@ To check the service log:
 
 ```bash
 sudo journalctl -u laravel-scheduler.service -n 20
+```
+
+## Log Output to a File
+
+If you prefer to keep a log of scheduler runs, modify your service file:
+
+```ini
+ExecStart=php artisan schedule:run >> /var/www/your-laravel-app/storage/logs/scheduler.log 2>&1
 ```
