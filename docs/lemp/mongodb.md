@@ -76,7 +76,7 @@ net:
   bindIp: 0.0.0.0
 ```
 
-## mongosh
+## Install mongosh only
 
 [MongoDB Shell (mongosh)](https://www.mongodb.com/zh-cn/docs/mongodb-shell/)
 [mongosh method](https://www.mongodb.com/zh-cn/docs/manual/reference/method/)
