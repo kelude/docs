@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# Install MySQL 8.4 on Ubuntu Server
+# Install MySQL 8.4 LTS on Ubuntu Server 24.04
 
 [Official Documentation](https://dev.mysql.com/doc/refman/8.4/en/linux-installation-apt-repo.html)
 
