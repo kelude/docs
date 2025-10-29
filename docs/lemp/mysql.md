@@ -99,18 +99,17 @@ sudo mysql -e "SELECT VERSION();"
 
 ## Secure the Installation
 
-Run the secure installation tool:
+Run the security script provided by MySQL to enhance your database's security.
 
 ```bash
 sudo mysql_secure_installation
 ```
 
-Recommended production answers:
+This script will guide you through several security options, including:
 
-- Validate password plugin: **Y**
-- Remove anonymous users: **Y**
-- Disallow root login remotely: **Y**
-- Remove test database: **Y**
-- Reload privileges: **Y**
-
-
+- Enabling the Validate Password Component (recommended for strong password policies).
+- Changing the root password (if not already set or if you want to change it).
+- Removing anonymous users.
+- Disallowing root login remotely.
+- Removing the test database and access to it.
+- Reloading privilege tables.
