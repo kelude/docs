@@ -72,6 +72,9 @@ Save and restart Xray:
 
 ```bash
 systemctl restart xray
+```
+
+```bash
 systemctl status xray
 ```
 
