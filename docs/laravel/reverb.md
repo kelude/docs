@@ -45,7 +45,7 @@ sudo supervisorctl status
 ### Web Server
 
 ```shell
-sudo nano /etc/nginx/conf.d/laravel-reverb.conf
+sudo vim /etc/nginx/conf.d/reverb.example.com.conf
 ```
 
 ```nginx
