@@ -28,9 +28,8 @@ sudo dpkg -i mysql-apt-config_0.8.36-1_all.deb
 
 During the prompt:
 
-1. In the menu, go to MySQL Server & Cluster (Currently selected: mysql-8.0)
-2. Change it to mysql-8.4-lts
-3. Press **OK** to confirm and exit.
+1. Change it to `MySQL Server & Cluster (Currently selected: mysql-8.4-lts)`
+2. Press **OK** to confirm and exit.
 
 Then refresh your package lists:
 
