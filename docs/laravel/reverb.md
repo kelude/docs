@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# Reverb
+# Running Laravel Reverb in Production
 
 [Official Documentation](https://laravel.com/docs/reverb)
 
