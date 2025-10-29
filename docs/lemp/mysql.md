@@ -10,84 +10,82 @@ outline: deep
 
 Since MySQL 8.0 is in Ubuntu's default repositories, you will need to add the official MySQL repository to install version 8.4 LTS.
 
-### 1. Update your package list:
+1. Update your package list:
 
-```bash
-sudo apt update
-```
+   ```bash
+   sudo apt update
+   ```
 
-### 2. Download the MySQL APT configuration package:
+2. Download the MySQL APT configuration package:
 
-to check the latest version: [MySQL APT Repository](https://dev.mysql.com/downloads/repo/apt/)
+   to check the latest version: [MySQL APT Repository](https://dev.mysql.com/downloads/repo/apt/)
 
-```bash
-wget https://dev.mysql.com/get/mysql-apt-config_0.8.36-1_all.deb
-```
+   ```bash
+   wget https://dev.mysql.com/get/mysql-apt-config_0.8.36-1_all.deb
+   ```
 
-### 3. Install the downloaded `.deb` package:
+3. Install the downloaded `.deb` package:
 
-```bash
-sudo dpkg -i mysql-apt-config_0.8.36-1_all.deb
-```
+   ```bash
+   sudo dpkg -i mysql-apt-config_0.8.36-1_all.deb
+   ```
 
-During the prompt:
+   During the prompt:
 
-- Change it to `MySQL Server & Cluster (Currently selected: mysql-8.4-lts)`
-- Choose **OK** to confirm and exit.
+   - Change it to `MySQL Server & Cluster (Currently selected: mysql-8.4-lts)`
+   - Choose **OK** to confirm and exit.
 
-Then refresh your package lists:
+   Then refresh your package lists:
 
-```bash
-sudo apt update
-```
+   ```bash
+   sudo apt update
+   ```
 
-### 4. Confirm It’s Pointing to MySQL 8.4 LTS
+4. Confirm It’s Pointing to MySQL 8.4 LTS
 
-Run:
+   ```bash
+   apt-cache policy mysql-server
+   ```
 
-```bash
-apt-cache policy mysql-server
-```
+   ```yaml
+   mysql-server:
+     Installed: (none)
+     Candidate: 8.4.7-1ubuntu24.04
+     Version table:
+        8.4.7-1ubuntu24.04 500
+           500 http://repo.mysql.com/apt/ubuntu noble/mysql-8.4-lts amd64 Packages
+   ```
 
-```yaml
-mysql-server:
-  Installed: (none)
-  Candidate: 8.4.7-1ubuntu24.04
-  Version table:
-     8.4.7-1ubuntu24.04 500
-        500 http://repo.mysql.com/apt/ubuntu noble/mysql-8.4-lts amd64 Packages
-```
+   If you still see 8.0 listed as “Candidate”, it means the repo config wasn’t set correctly — you can reconfigure:
 
-If you still see 8.0 listed as “Candidate”, it means the repo config wasn’t set correctly — you can reconfigure:
+   ```bash
+   sudo dpkg-reconfigure mysql-apt-config
+   sudo apt update
+   ```
 
-```bash
-sudo dpkg-reconfigure mysql-apt-config
-sudo apt update
-```
+   Then confirm again with `apt-cache policy`.
 
-Then confirm again with `apt-cache policy`.
+5. Install MySQL 8.4 LTS
 
-### 5. Install MySQL 8.4 LTS
+   Now install MySQL normally — it will pull 8.4 LTS from Oracle’s repo:
 
-Now install MySQL normally — it will pull 8.4 LTS from Oracle’s repo:
+   ```bash
+   sudo apt install mysql-server
+   ```
 
-```bash
-sudo apt install mysql-server
-```
+   This installs and starts the MySQL 8.4 service automatically.
 
-This installs and starts the MySQL 8.4 service automatically.
+   ```bash
+   sudo systemctl status mysql
+   ```
 
-```bash
-sudo systemctl status mysql
-```
+6. Verify Installation
 
-### 6. Verify Installation
+   Check the version:
 
-Check the version:
-
-```bash
-mysql -V
-```
+   ```bash
+   mysql -V
+   ```
 
 Expected output (example):
 
