@@ -114,11 +114,10 @@ Template example:
 
 ```ini
 pm = dynamic
-pm.max_children = 40
+pm.max_children = 30
 pm.start_servers = 5
 pm.min_spare_servers = 5
-pm.max_spare_servers = 15
-pm.max_requests = 500
+pm.max_spare_servers = 20
 ```
 
 ### Apply and Restart PHP-FPM
