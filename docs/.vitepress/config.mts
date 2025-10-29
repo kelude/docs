@@ -33,8 +33,8 @@ export default defineConfig({
         text: 'Laravel',
         items: [
           { text: 'queues', link: '/laravel/queues' },
-          { text: 'scheduling', link: '/laravel/scheduling' },
-          { text: 'reverb', link: '/laravel/reverb' },
+          { text: 'Task Scheduling', link: '/laravel/scheduling' },
+          { text: 'Reverb', link: '/laravel/reverb' },
         ]
       },
       {
