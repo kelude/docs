@@ -113,6 +113,3 @@ Recommended production answers:
 - Reload privileges: **Y**
 
 
-```sql
-SELECT user, host FROM mysql.user;
-```
