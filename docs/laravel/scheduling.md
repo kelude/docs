@@ -133,7 +133,7 @@ To check the service log:
 sudo journalctl -u laravel-scheduler.service -n 20
 ```
 
-## Log Output to a File
+### Log Output to a File
 
 If you prefer to keep a log of scheduler runs, modify your service file:
 
