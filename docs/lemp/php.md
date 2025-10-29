@@ -48,6 +48,8 @@ sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 php -r "unlink('composer-setup.php');"
 ```
 
+Check the composer version:
+
 ```bash
 composer --version
 ```
