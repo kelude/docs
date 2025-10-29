@@ -3,7 +3,7 @@
 
 ## Installation
 
-[XTLS/Xray-install](https://github.com/XTLS/Xray-install)
+[XTLS/Xray-install](https://github.com/XTLS/Xray-install) (Official)
 
 ```bash
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install
