@@ -8,8 +8,6 @@ outline: deep
 
 This guide explains how to run Laravel’s task scheduler automatically using either **crontab** or a **systemd timer**.
 
----
-
 ## Running the Scheduler Using Crontab
 
 ### Edit the Crontab for `www-data`
