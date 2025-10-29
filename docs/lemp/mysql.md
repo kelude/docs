@@ -138,7 +138,9 @@ Now that the root user is configured for password authentication, you can run th
 
 2. Follow the on-screen prompts to configure your server's security settings.
 
-   - VALIDATE PASSWORD COMPONENT: Choose your desired password validation policy.
+   - VALIDATE PASSWORD COMPONENT:
+     Press y|Y for Yes, any other key for No: `y`
+     Please enter 0 = LOW, 1 = MEDIUM and 2 = STRONG: `2`
    - Enter password for user root: Re-enter the password you set in the previous step.
    - Change the password for root ? ((Press y|Y for Yes, any other key for No) : `enter`
    - Remove anonymous users? (Press y|Y for Yes, any other key for No) : `y`
