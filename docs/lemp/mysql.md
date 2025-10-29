@@ -105,25 +105,25 @@ sudo mysql -e "SELECT VERSION();"
 
 The `mysql_secure_installation` script will fail if you don't first set up a password for the `root` user. To fix this, change the authentication plugin from `auth_socket` to `mysql_native_password`. 
 
-### Log in to the MySQL shell using `sudo`
+1. Log in to the MySQL shell using `sudo`
+   
+   ```bash
+   sudo mysql
+   ```
 
-```bash
-sudo mysql
-```
+2. Alter the root user
 
-### Alter the root user
+   ```sql
+   ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_password';
+   ```
 
-```sql
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_password';
-```
+   Replace `your_password` with a strong, secure password.
 
-Replace `your_password` with a strong, secure password.
+3. Exit the MySQL shell
 
-### Exit the MySQL shell
-
-```sql
-exit;
-```
+   ```sql
+   exit;
+   ```
 
 
 ## Run the security script
@@ -131,18 +131,19 @@ exit;
 Now that the root user is configured for password authentication, you can run the `mysql_secure_installation` script safely.
 
 1. Execute the command:
-  ```bash
-  sudo mysql_secure_installation
-  ```
+
+   ```bash
+   sudo mysql_secure_installation
+   ```
 
 2. Follow the on-screen prompts to configure your server's security settings.
 
-  - VALIDATE PASSWORD COMPONENT: Choose your desired password validation policy.
-  - New password for root: Re-enter the password you set in the previous step.
-  - Remove anonymous users?: Enter `y`.
-  - Disallow root login remotely?: Enter `y`.
-  - Remove test database and access to it?: Enter `y`.
-  - Reload privilege tables now?: Enter `y`
+   - VALIDATE PASSWORD COMPONENT: Choose your desired password validation policy.
+   - New password for root: Re-enter the password you set in the previous step.
+   - Remove anonymous users?: Enter `y`.
+   - Disallow root login remotely?: Enter `y`.
+   - Remove test database and access to it?: Enter `y`.
+   - Reload privilege tables now?: Enter `y`
 
 ## Revert the authentication plugin (optional)
 
