@@ -24,15 +24,15 @@ export default defineConfig({
       {
         text: 'LEMP',
         items: [
-          { text: 'nginx', link: '/lemp/nginx' },
-          { text: 'mysql', link: '/lemp/mysql' },
-          { text: 'php', link: '/lemp/php' }
+          { text: 'Nginx', link: '/lemp/nginx' },
+          { text: 'MySQL', link: '/lemp/mysql' },
+          { text: 'PHP', link: '/lemp/php' }
         ]
       },
       {
         text: 'Laravel',
         items: [
-          { text: 'queues', link: '/laravel/queues' },
+          { text: 'Queues', link: '/laravel/queues' },
           { text: 'Task Scheduling', link: '/laravel/scheduling' },
           { text: 'Reverb', link: '/laravel/reverb' },
         ]
@@ -40,11 +40,11 @@ export default defineConfig({
       {
         text: 'Services',
         items: [
-          { text: 'redis', link: '/services/redis' },
-          { text: 'nodejs', link: '/services/nodejs' },
-          { text: 'certbot', link: '/services/certbot' },
-          { text: 'minio', link: '/services/minio' },
-          { text: 'supervisor', link: '/services/supervisor' },
+          { text: 'Redis', link: '/services/redis' },
+          { text: 'Nodejs', link: '/services/nodejs' },
+          { text: 'Certbot', link: '/services/certbot' },
+          { text: 'Minio', link: '/services/minio' },
+          { text: 'Supervisor', link: '/services/supervisor' },
         ]
       }
     ],
