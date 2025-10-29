@@ -65,7 +65,7 @@ sudo dpkg-reconfigure mysql-apt-config
 sudo apt update
 ```
 
-Then confirm again with `apt-cache policy`.
+Then confirm again with `apt-cache policy mysql-server`.
 
 ### Install MySQL 8.4 LTS
 
