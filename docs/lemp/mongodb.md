@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# MongoDB
+# Install MongoDB on Ubuntu Server 24.04
 
 ## Install MongoDB Community Edition on Ubuntu
 
