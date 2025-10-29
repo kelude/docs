@@ -4,6 +4,8 @@ outline: deep
 
 # Install PHP on Ubuntu Server
 
+## Install PHP
+
 ### Add the Ondřej Surý PPA for PHP
 
 ```bash
@@ -36,7 +38,7 @@ Zend Engine v4.4.7, Copyright (c) Zend Technologies
 sudo systemctl status php8.4-fpm
 ```
 
-### Install Composer
+## Install Composer
 
 ```bash
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
@@ -50,7 +52,7 @@ php -r "unlink('composer-setup.php');"
 composer --version
 ```
 
-### Setting `open_basedi`r in `.user.ini`
+## Setting `open_basedi`r in `.user.ini`
 
 WordPress example
 
