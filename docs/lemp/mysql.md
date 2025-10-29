@@ -8,6 +8,8 @@ outline: deep
 
 ## Update the Package Index
 
+[MySQL APT Repository](https://dev.mysql.com/downloads/repo/apt/)
+
 First, update the package index to ensure the latest information on available packages.
 
 ```bash
