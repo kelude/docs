@@ -38,10 +38,11 @@ php -v
 Expected output (example):
 
 ```
-PHP 8.4.7 (cli) (built: May  9 2025 06:54:31) (NTS)
+PHP 8.4.14 (cli) (built: Oct 27 2025 20:53:56) (NTS)
 Copyright (c) The PHP Group
-Zend Engine v4.4.7, Copyright (c) Zend Technologies
-    with Zend OPcache v8.4.7, Copyright (c), by Zend Technologies
+Built by Debian
+Zend Engine v4.4.14, Copyright (c) Zend Technologies
+    with Zend OPcache v8.4.14, Copyright (c), by Zend Technologies
 ```    
 
 ### Verify PHP-FPM Status
