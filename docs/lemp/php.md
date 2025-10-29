@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# Install PHP on Ubuntu Server
+# Install PHP and Composer on Ubuntu Server
 
 ## Install PHP
 
@@ -92,7 +92,7 @@ sudo nano /etc/php/8.4/fpm/pool.d/www.conf
 
 ### Recommended Configuration
 
-Set the process manager to dynamic for balanced resource usage:
+Set the process manager to `dynamic` for balanced resource usage:
 
 ```ini
 pm = dynamic
