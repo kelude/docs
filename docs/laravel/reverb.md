@@ -67,5 +67,12 @@ server {
  
         proxy_pass http://0.0.0.0:8080;
     }
+
+    #listen [::]:443 ssl;
+    #listen 443 ssl;
+    #ssl_certificate /etc/letsencrypt/live/reverb.example.com/fullchain.pem;
+    #ssl_certificate_key /etc/letsencrypt/live/reverb.example.com/privkey.pem;
+    #include /etc/letsencrypt/options-ssl-nginx.conf;
+    #ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
 }
 ```
