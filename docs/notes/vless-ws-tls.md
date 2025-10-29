@@ -160,6 +160,9 @@ ws.example.com {
 
 ```bash
 sudo caddy fmt --overwrite /etc/caddy/Caddyfile
+```
+
+```bash
 caddy validate --config /etc/caddy/Caddyfile
 ```
 
@@ -167,6 +170,9 @@ caddy validate --config /etc/caddy/Caddyfile
 
 ```bash
 caddy reload --config /etc/caddy/Caddyfile
+```
+
+```bash
 systemctl status caddy
 ```
 
