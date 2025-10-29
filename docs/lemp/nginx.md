@@ -2,11 +2,11 @@
 outline: deep
 ---
 
-# Nginx
+# Install Nginx stable version on Ubuntu Server
 
-[Install Nginx stable version on Ubuntu](https://nginx.org/en/linux_packages.html#Ubuntu)
+[Official Documentation](https://nginx.org/en/linux_packages.html#Ubuntu)
 
-### Installation
+## Installation
 
 Install the prerequisites:
 
@@ -78,7 +78,7 @@ sudo systemctl start nginx
 sudo systemctl enable nginx
 ```
 
-### Deploy a website with php-fpm
+## Deploy a website with php-fpm
 
 ```shell
 sudo nano /etc/nginx/conf.d/example.com.conf
