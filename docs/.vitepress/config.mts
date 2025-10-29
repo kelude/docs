@@ -34,7 +34,6 @@ export default defineConfig({
         items: [
           { text: 'queues', link: '/laravel/queues' },
           { text: 'scheduling', link: '/laravel/scheduling' },
-          { text: 'homestead', link: '/laravel/homestead' },
           { text: 'reverb', link: '/laravel/reverb' },
         ]
       },
