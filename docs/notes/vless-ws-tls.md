@@ -64,7 +64,7 @@ vless://YOUR-UUID@ws.example.com:443?encryption=none&security=tls&type=ws&host=w
 
 ## Caddy
 
-[Install Caddy server on Debian, Ubuntu, Raspbian](https://caddyserver.com/docs/install#debian-ubuntu-raspbian)
+[Install Caddy server on Debian, Ubuntu, Raspbian](https://caddyserver.com/docs/install#debian-ubuntu-raspbian) (Official)
 
 ```bash
 caddy version
