@@ -1,23 +1,31 @@
-# VLESS + WS + TLS 
+# ⚡ VLESS + WS + TLS Setup Guide
 
+This guide explains how to install and configure Xray with VLESS + WebSocket + TLS, using Caddy as the reverse proxy and TLS provider.
 
-## Installation
+## 🧩 1. Installation
 
-[XTLS/Xray-install](https://github.com/XTLS/Xray-install) (Official)
+Official installation script from [XTLS/Xray-install](https://github.com/XTLS/Xray-install):
 
 ```bash
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install
 ```
 
-## Configuration
+After installation, check your Xray version and generate a UUID:
 
 ```bash
+xray version
 xray uuid
 ```
+
+## ⚙️ 2. Xray Configuration
+
+Edit the configuration file:
 
 ```bash
 vim /usr/local/etc/xray/config.json
 ```
+
+Paste and modify the following template:
 
 ```json
 {
@@ -53,30 +61,48 @@ vim /usr/local/etc/xray/config.json
 }
 ```
 
+Save and restart Xray:
+
 ```bash
 systemctl restart xray
 systemctl status xray
 ```
 
+## 🔗 3. VLESS Client URL
+
+Use the following URL format to connect:
+
 ```
 vless://YOUR-UUID@ws.example.com:443?encryption=none&security=tls&type=ws&host=ws.example.com&path=%2Fapp&sni=ws.example.com#VLESS-WS-TLS
 ```
 
-## Caddy
+> Replace `YOUR-UUID` and `ws.example.com` with your actual UUID and domain name.
 
-[Install Caddy server on Debian, Ubuntu, Raspbian](https://caddyserver.com/docs/install#debian-ubuntu-raspbian) (Official)
+## 🌐 4. Caddy Configuration (TLS + Reverse Proxy)
+
+Official Caddy installation guide for Debian/Ubuntu/Raspbian:
+
+👉 [Caddy Documentation](https://caddyserver.com/docs/install#debian-ubuntu-raspbian)
+
+Check Caddy Installation
 
 ```bash
 caddy version
 ```
 
+Backup Default Configuration
+
 ```bash
 cp /etc/caddy/Caddyfile /etc/caddy/Caddyfile.default
 ```
 
+Edit the Caddyfile
+
 ```bash
 vim /etc/caddy/Caddyfile
 ```
+
+Example configuration:
 
 ```caddyfile
 ws.example.com {
@@ -91,19 +117,24 @@ ws.example.com {
 }
 ```
 
-```bash
-sudo caddy fmt --overwrite /etc/caddy/Caddyfile
-```
+Format and Validate Configuration
 
 ```bash
+sudo caddy fmt --overwrite /etc/caddy/Caddyfile
 caddy validate --config /etc/caddy/Caddyfile
 ```
 
-```bash
-caddy reload --config /etc/caddy/Caddyfile
-```
+Reload Caddy
 
 ```bash
+caddy reload --config /etc/caddy/Caddyfile
 systemctl status caddy
 ```
 
+## ✅ 5. Done!
+
+Your VLESS + WS + TLS setup is now complete.
+
+- Xray runs locally on port `10000`
+- Caddy handles TLS and reverse proxies traffic to Xray
+- Use the generated VLESS URL in your client app
