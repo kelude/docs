@@ -84,19 +84,19 @@ Official Caddy installation guide for Debian/Ubuntu/Raspbian:
 
 👉 [Caddy Documentation](https://caddyserver.com/docs/install#debian-ubuntu-raspbian)
 
-Check Caddy Installation
+### Check Caddy Installation
 
 ```bash
 caddy version
 ```
 
-Backup Default Configuration
+### Backup Default Configuration
 
 ```bash
 cp /etc/caddy/Caddyfile /etc/caddy/Caddyfile.default
 ```
 
-Edit the Caddyfile
+### Edit the Caddyfile
 
 ```bash
 vim /etc/caddy/Caddyfile
@@ -117,14 +117,14 @@ ws.example.com {
 }
 ```
 
-Format and Validate Configuration
+### Format and Validate Configuration
 
 ```bash
 sudo caddy fmt --overwrite /etc/caddy/Caddyfile
 caddy validate --config /etc/caddy/Caddyfile
 ```
 
-Reload Caddy
+### Reload Caddy
 
 ```bash
 caddy reload --config /etc/caddy/Caddyfile
