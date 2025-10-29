@@ -36,20 +36,20 @@ Paste and modify the following template:
   "inbounds": [
     {
       "port": 10000,
-      "listen":"127.0.0.1",
+      "listen": "127.0.0.1",
       "protocol": "vless",
       "settings": {
         "clients": [
           {
             "id": "YOUR-UUID",
-	    	"level": 0
+            "level": 0
           }
         ],
-		"decryption": "none"
+        "decryption": "none"
       },
       "streamSettings": {
         "network": "ws",
-		"security": "none",
+        "security": "none",
         "wsSettings": {
           "path": "/app"
         }
