@@ -6,15 +6,17 @@ outline: deep
 
 [Official Documentation](https://laravel.com/docs/reverb)
 
-### Supervisor Configuration
+## Supervisor Setup
+
+### Install Supervisor
 
 ```bash
 sudo apt-get install supervisor
 ```
 
-#### Configuring Supervisor
+### Create Supervisor Config
 
-```shell
+```bash
 sudo vim /etc/supervisor/conf.d/laravel-reverb.conf
 ```
 
@@ -32,21 +34,17 @@ redirect_stderr=true
 stdout_logfile=/var/www/laravel-reverb/reverb.log
 ```
 
-#### Starting Supervisor
+### Apply and Verify
 
-```shell
+```bash
 sudo supervisorctl reread
-```
-
-```shell
 sudo supervisorctl update
-```
-
-```shell
 sudo supervisorctl status
 ```
 
-### Web Server
+## Nginx Configuration
+
+### Create Nginx Config
 
 ```shell
 sudo vim /etc/nginx/conf.d/reverb.example.com.conf
@@ -72,14 +70,16 @@ server {
         proxy_pass http://0.0.0.0:8080;
     }
 
-    #listen [::]:443 ssl;
-    #listen 443 ssl;
-    #ssl_certificate /etc/letsencrypt/live/reverb.example.com/fullchain.pem;
-    #ssl_certificate_key /etc/letsencrypt/live/reverb.example.com/privkey.pem;
-    #include /etc/letsencrypt/options-ssl-nginx.conf;
-    #ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+    # listen [::]:443 ssl;
+    # listen 443 ssl;
+    # ssl_certificate /etc/letsencrypt/live/reverb.example.com/fullchain.pem;
+    # ssl_certificate_key /etc/letsencrypt/live/reverb.example.com/privkey.pem;
+    # include /etc/letsencrypt/options-ssl-nginx.conf;
+    # ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
 }
 ```
+
+### Enable HTTPS
 
 ```bash
 sudo apt install certbot python3-certbot-nginx
