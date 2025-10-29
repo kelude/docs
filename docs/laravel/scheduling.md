@@ -70,7 +70,7 @@ ExecStart=/usr/bin/php artisan schedule:run
 Type=oneshot
 ```
 
-Save and exit (`Ctrl+O`, `Ctrl+X`).
+Save and exit (`Ctrl+O` (the letter O, not zero) to write the file, then `Ctrl+X` to exit).
 
 ### Create the Timer Unit
 
