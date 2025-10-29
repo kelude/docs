@@ -33,7 +33,7 @@ During the prompt:
 
 1. In the menu, go to MySQL Server & Cluster (Currently selected: mysql-8.0)
 2. Change it to mysql-8.4-lts
-3. Press *OK* to confirm and exit.
+3. Press **OK** to confirm and exit.
 
 Then refresh your package lists:
 
@@ -104,13 +104,13 @@ Run the secure installation tool:
 sudo mysql_secure_installation
 ```
 
-- Recommended production answers:
-- 
-- Validate password plugin: *Y*
-- Remove anonymous users: *Y*
-- Disallow root login remotely: *Y*
-- Remove test database: *Y*
-- Reload privileges: *Y*
+Recommended production answers:
+
+- Validate password plugin: **Y**
+- Remove anonymous users: **Y**
+- Disallow root login remotely: **Y**
+- Remove test database: **Y**
+- Reload privileges: **Y**
 
 ## Create database and user
 
