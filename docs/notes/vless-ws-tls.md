@@ -1,4 +1,4 @@
-# ⚡ VLESS + WS + TLS Setup Guide
+# VLESS + WS + TLS Setup Guide
 
 This guide explains how to install and configure Xray with VLESS + WebSocket + TLS, using Caddy as the reverse proxy and TLS provider.
 
