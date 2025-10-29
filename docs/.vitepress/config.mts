@@ -26,6 +26,7 @@ export default defineConfig({
         items: [
           { text: 'Nginx', link: '/lemp/nginx' },
           { text: 'MySQL', link: '/lemp/mysql' },
+          { text: 'MongoDB', link: '/lemp/mongodb' },
           { text: 'PHP', link: '/lemp/php' }
         ]
       },
