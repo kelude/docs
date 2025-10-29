@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# PHP
+# Install PHP on Ubuntu Server
 
 ### Add the Ondřej Surý PPA for PHP
 
