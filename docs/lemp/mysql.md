@@ -101,9 +101,33 @@ You can also confirm from inside MySQL:
 sudo mysql -e "SELECT VERSION();"
 ```
 
+## Change the root user authentication method
+
+The `mysql_secure_installation` script will fail if you don't first set up a password for the `root` user. To fix this, change the authentication plugin from `auth_socket` to `mysql_native_password`. 
+
+1. Log in to the MySQL shell using sudo:
+
+```bash
+sudo mysql
+```
+
+2. Alter the root user:
+
+```sql
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_password';
+```
+
+Replace `your_password` with a strong, secure password.
+
 ## Secure the Installation
 
 Run the security script provided by MySQL to enhance your database's security.
+
+3. Exit the MySQL shell:
+
+```sql
+exit;
+```
 
 ```bash
 sudo mysql_secure_installation
