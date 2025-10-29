@@ -6,7 +6,7 @@ outline: deep
 
 [Official Documentation](https://dev.mysql.com/doc/refman/8.4/en/linux-installation-apt-repo.html)
 
-### Update the Package Index
+## Update the Package Index
 
 First, update the package index to ensure the latest information on available packages.
 
@@ -14,7 +14,7 @@ First, update the package index to ensure the latest information on available pa
 sudo apt update
 ```
 
-### Install MySQL Server
+## Install MySQL Server
 
 Install the MySQL server package using the `apt` package manager.
 
@@ -34,7 +34,7 @@ Output
 mysql  Ver 8.0.36-0ubuntu0.22.04.1 for Linux on x86_64 ((Ubuntu))
 ```
 
-### Secure MySQL Installation
+## Secure MySQL Installation
 
 Run the `mysql_secure_installation` command to secure the MySQL installation.
 
@@ -127,7 +127,7 @@ Success.
 All done!
 ```
 
-### Create database and user
+## Create database and user
 
 ```shell
 mysql -u root -p
@@ -169,7 +169,7 @@ FLUSH PRIVILEGES;
 SHOW DATABASES;
 ```
 
-### Export & Import
+## Export & Import
 
 #### Export
 
