@@ -8,6 +8,10 @@ outline: deep
 
 ### Supervisor Configuration
 
+```bash
+sudo apt-get install supervisor
+```
+
 #### Configuring Supervisor
 
 ```shell
@@ -75,4 +79,12 @@ server {
     #include /etc/letsencrypt/options-ssl-nginx.conf;
     #ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
 }
+```
+
+```bash
+sudo apt install certbot python3-certbot-nginx
+```
+
+```bash
+sudo certbot certonly --nginx -d reverb.example.com
 ```
