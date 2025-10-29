@@ -47,9 +47,10 @@ apt-cache policy mysql-server
 
 ```yaml
 mysql-server:
-  Candidate: 8.4.2-1ubuntu24.04
+  Installed: (none)
+  Candidate: 8.4.7-1ubuntu24.04
   Version table:
-     8.4.2-1ubuntu24.04 500
+     8.4.7-1ubuntu24.04 500
         500 http://repo.mysql.com/apt/ubuntu noble/mysql-8.4-lts amd64 Packages
 ```
 
