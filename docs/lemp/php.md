@@ -100,14 +100,14 @@ pm = dynamic
 
 ### Suggested PHP-FPM Process Settings
 
-| RAM | pm.max_children | pm.start_servers | pm.min_spare_servers | pm.max_spare_servers |
-|-----|-----------------|------------------|----------------------|----------------------|
-| 1G  | 30              | 5                | 5                    | 20                   |
-| 2G  | 50              | 5                | 5                    | 30                   |
-| 4G  | 80              | 10               | 10                   | 30                   |
-| 8G  | 120             | 10               | 10                   | 30                   |
-| 16G | 200             | 15               | 15                   | 50                   |
-| 32G | 300             | 20               | 20                   | 50                   |
+| RAM | max_children | start_servers | min_spare_servers | max_spare_servers |
+|-----|--------------|---------------|-------------------|-------------------|
+| 1G  | 30           | 5             | 5                 | 20                |
+| 2G  | 50           | 5             | 5                 | 30                |
+| 4G  | 80           | 10            | 10                | 30                |
+| 8G  | 120          | 10            | 10                | 30                |
+| 16G | 200          | 15            | 15                | 50                |
+| 32G | 300          | 20            | 20                | 50                |
 
 Template example:
 
