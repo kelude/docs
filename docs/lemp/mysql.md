@@ -20,6 +20,9 @@ to check the latest version: [MySQL APT Repository](https://dev.mysql.com/downlo
 
 ```bash
 wget https://dev.mysql.com/get/mysql-apt-config_0.8.36-1_all.deb
+```
+
+```bash
 sudo dpkg -i mysql-apt-config_0.8.36-1_all.deb
 ```
 
