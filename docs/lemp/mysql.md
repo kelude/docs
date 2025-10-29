@@ -140,10 +140,10 @@ Now that the root user is configured for password authentication, you can run th
 
    - VALIDATE PASSWORD COMPONENT: Choose your desired password validation policy.
    - New password for root: Re-enter the password you set in the previous step.
-   - Remove anonymous users?: Enter `y`.
-   - Disallow root login remotely?: Enter `y`.
-   - Remove test database and access to it?: Enter `y`.
-   - Reload privilege tables now?: Enter `y`
+   - Remove anonymous users? (Press y|Y for Yes, any other key for No) : `y`
+   - Disallow root login remotely? (Press y|Y for Yes, any other key for No) : `y`
+   - Remove test database and access to it? (Press y|Y for Yes, any other key for No) : `y`
+   - Reload privilege tables now? (Press y|Y for Yes, any other key for No) :  `y`
 
 ## Revert the authentication plugin (optional)
 
