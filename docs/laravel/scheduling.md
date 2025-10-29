@@ -6,7 +6,7 @@ outline: deep
 
 [Official Documentation](https://laravel.com/docs/scheduling)
 
-## Running the Scheduler
+## Running the Scheduler using Crontab
 
 ### Edit the Crontab for `www-data`
 
