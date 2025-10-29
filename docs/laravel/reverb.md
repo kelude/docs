@@ -11,7 +11,7 @@ outline: deep
 #### Configuring Supervisor
 
 ```shell
-sudo nano /etc/supervisor/conf.d/laravel-reverb.conf
+sudo vim /etc/supervisor/conf.d/laravel-reverb.conf
 ```
 
 ```ini
