@@ -153,15 +153,16 @@ To return to the more secure `auth_socket` authentication method for local root 
    sudo mysql
    ```
    
-3. Revert the plugin:
+2. Revert the plugin:
    ```sql
    ALTER USER 'root'@'localhost' IDENTIFIED WITH auth_socket;
    ```
    
-5. Exit the shell:
-  ```sql
-  exit;
-  ```
+3. Exit the shell:
+   ```sql
+   exit;
+   ```
+
 
 
 
