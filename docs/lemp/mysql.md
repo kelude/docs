@@ -105,13 +105,13 @@ sudo mysql -e "SELECT VERSION();"
 
 The `mysql_secure_installation` script will fail if you don't first set up a password for the `root` user. To fix this, change the authentication plugin from `auth_socket` to `mysql_native_password`. 
 
-1. Log in to the MySQL shell using sudo:
+### Log in to the MySQL shell using `sudo`
 
 ```bash
 sudo mysql
 ```
 
-2. Alter the root user:
+### Alter the root user
 
 ```sql
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_password';
@@ -119,25 +119,52 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_pas
 
 Replace `your_password` with a strong, secure password.
 
-## Secure the Installation
-
-Run the security script provided by MySQL to enhance your database's security.
-
-3. Exit the MySQL shell:
+### Exit the MySQL shell
 
 ```sql
 exit;
 ```
 
+
+## Run the security script
+
+Now that the root user is configured for password authentication, you can run the `mysql_secure_installation` script safely.
+
+1. Execute the command:
+
 ```bash
 sudo mysql_secure_installation
 ```
 
-This script will guide you through several security options, including:
+2. Follow the on-screen prompts to configure your server's security settings.
 
-- Enabling the VALIDATE PASSWORD Component (recommended for strong password policies).
-- Changing the root password (if not already set or if you want to change it).
-- Removing anonymous users.
-- Disallowing root login remotely.
-- Removing the test database and access to it.
-- Reloading privilege tables.
+- VALIDATE PASSWORD COMPONENT: Choose your desired password validation policy.
+- New password for root: Re-enter the password you set in the previous step.
+- Remove anonymous users?: Enter y.
+- Disallow root login remotely?: Enter y.
+- Remove test database and access to it?: Enter y.
+
+## Revert the authentication plugin (optional)
+
+To return to the more secure `auth_socket` authentication method for local root access, you can revert the change. This allows `sudo mysql` to work again while remote root login remains disabled. 
+
+1. Log back in to the MySQL shell:
+   ```bash
+   sudo mysql
+   ```
+   
+3. Revert the plugin:
+   ```sql
+   ALTER USER 'root'@'localhost' IDENTIFIED WITH auth_socket;
+   ```
+   
+5. Exit the shell:
+
+  ```sql
+  exit;
+  ```
+
+
+
+
+
