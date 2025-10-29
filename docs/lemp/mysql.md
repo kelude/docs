@@ -10,13 +10,13 @@ outline: deep
 
 Since MySQL 8.0 is in Ubuntu's default repositories, you will need to add the official MySQL repository to install version 8.4 LTS.
 
-1. Update your package list:
+### 1. Update your package list:
 
 ```bash
 sudo apt update
 ```
 
-2. Download the MySQL APT configuration package:
+### 2. Download the MySQL APT configuration package:
 
 to check the latest version: [MySQL APT Repository](https://dev.mysql.com/downloads/repo/apt/)
 
@@ -24,7 +24,7 @@ to check the latest version: [MySQL APT Repository](https://dev.mysql.com/downlo
 wget https://dev.mysql.com/get/mysql-apt-config_0.8.36-1_all.deb
 ```
 
-3. Install the downloaded `.deb` package:
+### 3. Install the downloaded `.deb` package:
 
 ```bash
 sudo dpkg -i mysql-apt-config_0.8.36-1_all.deb
@@ -41,7 +41,7 @@ Then refresh your package lists:
 sudo apt update
 ```
 
-4. Confirm It’s Pointing to MySQL 8.4 LTS
+### 4. Confirm It’s Pointing to MySQL 8.4 LTS
 
 Run:
 
@@ -67,7 +67,7 @@ sudo apt update
 
 Then confirm again with `apt-cache policy`.
 
-5. Install MySQL 8.4 LTS
+### 5. Install MySQL 8.4 LTS
 
 Now install MySQL normally — it will pull 8.4 LTS from Oracle’s repo:
 
@@ -81,7 +81,7 @@ This installs and starts the MySQL 8.4 service automatically.
 sudo systemctl status mysql
 ```
 
-6. Verify Installation
+### 6. Verify Installation
 
 Check the version:
 
