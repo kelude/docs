@@ -23,12 +23,6 @@ wget https://dev.mysql.com/get/mysql-apt-config_0.8.36-1_all.deb
 sudo dpkg -i mysql-apt-config_0.8.36-1_all.deb
 ```
 
-If your `wget` command can not be found:
-
-```bash
-sudo apt install wget gnupg lsb-release -y
-```
-
 During the prompt:
 
 1. In the menu, go to MySQL Server & Cluster (Currently selected: mysql-8.0)
