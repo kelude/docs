@@ -6,19 +6,39 @@ outline: deep
 
 [Official Documentation](https://laravel.com/docs/scheduling)
 
-## Running the Scheduler using Crontab
+This guide explains how to run Laravel’s task scheduler automatically using either **crontab** or a **systemd timer**.
+
+---
+
+## Running the Scheduler Using Crontab
 
 ### Edit the Crontab for `www-data`
+
+Laravel’s task scheduler needs to be executed every minute.  
+To run it as the `www-data` user (the default web server user for Apache/Nginx):
 
 ```bash
 sudo crontab -u www-data -e
 ```
 
+Then add the following line:
+
 ```
-* * * * * cd /var/wwww/your-laravel-app && php artisan schedule:run >> /dev/null 2>&1
+* * * * * cd /var/www/your-laravel-app && php artisan schedule:run >> /dev/null 2>&1
 ```
 
-## systemd timer
+### Test the Command
+
+You can test the scheduler manually to confirm it runs correctly:
+
+```bash
+sudo -u www-data php /var/www/your-laravel-app/artisan schedule:run
+```
+
+## Using a systemd Timer
+
+A systemd timer is a more modern and reliable alternative to cron.
+It provides automatic catch-up for missed runs (`Persistent=true`), better logging, and unified process management.
 
 ### Create a Systemd Service Unit
 
@@ -27,6 +47,8 @@ Create a new service file:
 ```bash
 sudo nano /etc/systemd/system/laravel-scheduler.service
 ```
+
+Add the following content:
 
 ```ini
 [Unit]
@@ -44,7 +66,7 @@ WorkingDirectory=/var/www/your-laravel-app
 # Run the scheduler
 ExecStart=/usr/bin/php artisan schedule:run
 
-# Don't restart automatically (not a daemon)
+# Run once and exit
 Type=oneshot
 ```
 
@@ -58,15 +80,26 @@ Now create the timer file:
 sudo nano /etc/systemd/system/laravel-scheduler.timer
 ```
 
+Add the following content:
+
 ```ini
 [Unit]
 Description=Run Laravel Task Scheduler every minute
 
 [Timer]
+# Start one minute after boot
 OnBootSec=1min
+
+# Run every minute thereafter
 OnUnitActiveSec=1min
+
+# Allow up to 30s of delay for batching
 AccuracySec=30s
+
+# The service unit to trigger
 Unit=laravel-scheduler.service
+
+# Ensure missed runs execute after downtime
 Persistent=true
 
 [Install]
@@ -74,6 +107,8 @@ WantedBy=timers.target
 ```
 
 ### Enable and Start the Timer
+
+Reload the systemd daemon, enable, and start the timer:
 
 ```bash
 sudo systemctl daemon-reload
