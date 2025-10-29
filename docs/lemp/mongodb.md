@@ -6,7 +6,7 @@ outline: deep
 
 ## Install MongoDB Community Edition on Ubuntu
 
-[Install MongoDB Community Edition on Ubuntu](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/)
+[Official Documentation](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/)
 
 ```bash
 cat /etc/lsb-release
