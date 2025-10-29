@@ -9,7 +9,7 @@ outline: deep
 ### Add the Ondřej Surý PPA for PHP
 
 The official Ubuntu repositories may not include the latest PHP versions.
-The Ondřej Surý PPA provides up-to-date and stable PHP packages.
+The **Ondřej Surý PPA** provides up-to-date and stable PHP packages.
 
 ```bash
 sudo add-apt-repository ppa:ondrej/php
