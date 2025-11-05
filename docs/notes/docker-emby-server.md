@@ -1,5 +1,7 @@
 # docker-emby-server
 
+## Docker + Emby
+
 ```bash
 sudo nano /root/docker-emby/docker-compose.yml
 ```
@@ -34,6 +36,17 @@ docker compose up -d
 
 ```bash
 docker compose down
+```
+
+## Emby + S3
+
+```bash
+sudo apt update
+sudo apt install rclone
+```
+
+```bash
+rclone version
 ```
 
 ```bash
