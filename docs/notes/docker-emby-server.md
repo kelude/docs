@@ -17,8 +17,8 @@ services:
       - GIDLIST=100 # A comma-separated list of additional GIDs to run emby as (default: 2)
     volumes:
       - /root/docker-emby/config:/config # Configuration directory
-      - /mnt/disk01/media/movies:/mnt/media/movies # Media directory
-      - /mnt/disk01/media/tvshows:/mnt/media/tvshows # Media directory
+      - /mnt/disk01/media/movies:/mnt/media/movies:ro # Media directory
+      - /mnt/disk01/media/tvshows:/mnt/media/tvshows:ro # Media directory
     ports:
       - 8096:8096 # HTTP port
       - 8920:8920 # HTTPS port
