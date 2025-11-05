@@ -36,3 +36,38 @@ docker compose up -d
 docker compose down
 ```
 
+```bash
+vim /etc/systemd/system/rclone-mount.service
+```
+
+```ini
+[Unit]
+Description=Rclone Mount for Emby
+After=network-online.target
+Before=docker.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/rclone mount s3:mybucket /mnt/disk01/media \
+  --allow-other \
+  --dir-cache-time 72h \
+  --vfs-cache-mode full \
+  --vfs-cache-max-size 50G \
+  --buffer-size 128M
+ExecStop=/bin/fusermount -u /mnt/emby_media
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+```
+
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable --now rclone-mount
+```
+
+
+
+
+
