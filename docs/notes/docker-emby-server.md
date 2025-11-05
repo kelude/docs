@@ -43,20 +43,26 @@ vim /etc/systemd/system/rclone-mount.service
 ```ini
 [Unit]
 Description=Rclone Mount for Emby
+Wants=network-online.target
 After=network-online.target
 Before=docker.service
-Wants=network-online.target
 
 [Service]
 Type=simple
 ExecStart=/usr/bin/rclone mount s3:mybucket /mnt/disk01/media \
   --allow-other \
   --dir-cache-time 72h \
+  --poll-interval 15s \
   --vfs-cache-mode full \
   --vfs-cache-max-size 50G \
-  --buffer-size 128M
+  --vfs-read-chunk-size 32M \
+  --vfs-read-chunk-size-limit 2G \
+  --buffer-size 128M \
+  --log-file /var/log/rclone-mount.log \
+  --log-level INFO
 ExecStop=/bin/fusermount -u /mnt/disk01/media
 Restart=on-failure
+RestartSec=5
 
 [Install]
 WantedBy=multi-user.target
