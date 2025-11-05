@@ -55,7 +55,7 @@ ExecStart=/usr/bin/rclone mount s3:mybucket /mnt/disk01/media \
   --vfs-cache-mode full \
   --vfs-cache-max-size 50G \
   --buffer-size 128M
-ExecStop=/bin/fusermount -u /mnt/emby_media
+ExecStop=/bin/fusermount -u /mnt/disk01/media
 Restart=on-failure
 
 [Install]
